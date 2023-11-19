@@ -56,7 +56,6 @@ public class Student {
         String birthday_hidden = String.valueOf(LocalDate.parse("*".repeat(birthday.toString().length())));
         String createdAt_hidden = String.valueOf(LocalDateTime.parse("*".repeat(createdAt.toString().length())));
         String updatedAt_hidden = String.valueOf(LocalDateTime.parse("*".repeat(updatedAt.toString().length())));
-        String address_hidden = "*".repeat(address.length());
 
         return "Student{" +
                 "id='" +  id_hidden + '\'' +
@@ -65,7 +64,7 @@ public class Student {
                 ", birthday=" + birthday_hidden +
                 ", createdAt=" + createdAt_hidden +
                 ", updatedAt=" + updatedAt_hidden +
-                ", address=" + address_hidden +
+                ", address=" + address +
                 '}';
     }
 }
