@@ -55,15 +55,25 @@ public class Address {
 
     @Override
     public String toString() {
+        // Zastąpienie wartości na '*'
+        String id_hidden = "*".repeat(id.length());
+        String zipCode_hidden = "*".repeat(zipCode.length());
+        String street_hidden = "*".repeat(street.length());
+        String number_hidden = "*".repeat(number.length());
+        String complement_hidden = "*".repeat(complement.length());
+        String district_hidden = "*".repeat(district.length());
+        String city_hidden = "*".repeat(city.length());
+        String state_hidden = "*".repeat(state.length());
+
         return "Address{" +
-                "id='" + id + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                ", street='" + street + '\'' +
-                ", number='" + number + '\'' +
-                ", complement='" + complement + '\'' +
-                ", district='" + district + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
+                "id='" + id_hidden + '\'' +
+                ", zipCode='" + zipCode_hidden + '\'' +
+                ", street='" + street_hidden + '\'' +
+                ", number='" + number_hidden + '\'' +
+                ", complement='" + complement_hidden + '\'' +
+                ", district='" + district_hidden + '\'' +
+                ", city='" + city_hidden + '\'' +
+                ", state='" + state_hidden + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 '}';
