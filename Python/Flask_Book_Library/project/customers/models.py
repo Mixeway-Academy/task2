@@ -12,6 +12,14 @@ class Customer(db.Model):
     street = db.Column(db.String(128))
     appNo = db.Column(db.String(10))
 
+    @property
+    def pesel_masked(self):
+        return "*"*len(self.pesel or "")
+
+    @property
+    def street_masked(self):
+        return "*"*len(self.street or "")
+
     def __init__(self, name, city, age, pesel, street, appNo):
         self.name = name
         self.city = city
@@ -22,7 +30,7 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel_masked}, Street: {self.street_masked}, AppNo: {self.appNo})"
 
 
 with app.app_context():
