@@ -22,7 +22,23 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        #masked_name = Customer.data_masker(self.name)
+        masked_city = Customer.data_masker(self.city)
+        #masked_age = Customer.data_masker(self.age)
+        masked_pesel = Customer.data_masker(self.pesel)
+        masked_street = Customer.data_masker(self.street)
+        masked_appNo = Customer.data_masker(self.appNo)
+        #return f"Customer(ID: {self.id}, Name: {masked_name}, City: {masked_city}, Age: {masked_age}, Pesel: {masked_pesel}, Street: {masked_street}, AppNo: {masked_appNo})"
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {masked_city}, Age: {self.age}, Pesel: {masked_pesel}, Street: {masked_street}, AppNo: {masked_appNo})"
+
+    @staticmethod
+    def data_masker(data_to_be_masked):
+        mask_len = len(data_to_be_masked)
+        if mask_len == 0:
+            mask = '***********'
+        else:
+            mask = '*'*mask_len
+        return mask
 
 
 with app.app_context():
