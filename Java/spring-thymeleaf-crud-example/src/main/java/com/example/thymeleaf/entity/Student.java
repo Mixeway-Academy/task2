@@ -7,6 +7,8 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
+
+import lombok.ToString;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,16 +16,32 @@ import org.slf4j.LoggerFactory;
 @Setter
 @Entity
 @Table(name = "student")
+@ToString
 @EqualsAndHashCode(of = {"id"})
 public class Student {
     @Transient
     private static final Logger logger = LoggerFactory.getLogger(Student.class);
     @Id
     private String id;
-
+    @ToString.Exclude
     private String name;
+    @ToString.Exclude
     private String email;
+    @ToString.Exclude
     private LocalDate birthday;
+
+    @ToString.Include(name = "name")
+    private String maskName() {
+        return "******";
+    }
+    @ToString.Include(name = "email")
+    private String maskEmail() {
+        return "******";
+    }
+    @ToString.Include(name = "birthday")
+    private String maskBirthday() {
+        return "**-**-****";
+    }
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;
@@ -46,16 +64,4 @@ public class Student {
         this.updatedAt = LocalDateTime.now();
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", birthday=" + birthday +
-                ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
-                ", address=" + address +
-                '}';
-    }
 }
