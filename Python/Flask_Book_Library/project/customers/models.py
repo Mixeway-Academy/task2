@@ -22,8 +22,11 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
-
+        masked_pesel = '*' * len(self.pesel)
+        masked_city = '*' * len(self.city)
+        masked_street = '*' * len(self.street)
+        masked_appNo = '*' * len(self.appNo)
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {masked_city}, Age: {self.age}, Pesel: {masked_pesel}, Street: {masked_street}, AppNo: {masked_appNo})"
 
 with app.app_context():
     db.create_all()
