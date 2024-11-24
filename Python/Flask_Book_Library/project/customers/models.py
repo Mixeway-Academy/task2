@@ -22,7 +22,11 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        self.name2 = self.name.split()
+        self.firstname = self.name2[0]
+        self.surname = self.name2[1]
+
+        return f"Customer(ID: {self.id}, Name: {self.firstname + ' ' + self.surname[0] + ('*' * (len(self.surname)-1))}, City: {self.city[0]+('*' * (len(self.city)-1))}, Age: {'*' * len(self.age)}, Pesel: {'*' * len(self.pesel)}, Street: {self.street[0]+('*' * (len(self.street)-1))}, AppNo: {'*' * len(self.appNo)})"
 
 
 with app.app_context():
