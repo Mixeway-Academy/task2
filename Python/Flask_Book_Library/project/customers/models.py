@@ -2,6 +2,13 @@ from project import db, app
 
 
 # Customer model
+def anonymize(value):
+    """Anonymizes a given string by replacing it with * symbols."""
+    if value:
+        return "*" * len(value)
+    return "N/A"
+
+
 class Customer(db.Model):
     __tablename__ = 'customers'
     id = db.Column(db.Integer, primary_key=True)
@@ -22,7 +29,7 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {anonymize(self.city)}, Age: {self.age}, Pesel: {anonymize(self.pesel)}, Street: {anonymize(self.street)}, AppNo: {anonymize(self.appNo)})"
 
 
 with app.app_context():

@@ -1,0 +1,75 @@
+G:\Studia\tbo\lab2\task2>docker run -v G:\Studia\tbo\lab2\task2:/path zricethezav/gitleaks:latest detect --source="/path" -v
+Unable to find image 'zricethezav/gitleaks:latest' locally
+latest: Pulling from zricethezav/gitleaks
+94c7366c1c30: Pull complete
+3e97f466b634: Pull complete
+4874c05f69ad: Pull complete
+43aa3c0c54b2: Pull complete
+Digest: sha256:0e99e8821643ea5b235718642b93bb32486af9c8162c8b8731f7cbdc951a7f46
+Status: Downloaded newer image for zricethezav/gitleaks:latest
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+Finding:     -----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+KUp...
+Secret:      -----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+KUp...
+RuleID:      private-key
+Entropy:     5.875154
+File:        deployment.key
+Line:        1
+Commit:      bc17b7ddc46f46fff175aed55d68e11bb48166cc
+Author:      Grzegorz Siewruk
+Email:       gsiewruk@gmail.com
+Date:        2023-11-15T12:52:32Z
+Fingerprint: bc17b7ddc46f46fff175aed55d68e11bb48166cc:deployment.key:private-key:1
+
+Finding:     -----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+KUp...
+Secret:      -----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+KUp...
+RuleID:      private-key
+Entropy:     5.875154
+File:        deployment2.key
+Line:        1
+Commit:      de9d7b8cb63bd7ae741ec5c9e23891b71709bc28
+Author:      Grzegorz Siewruk
+Email:       gsiewruk@gmail.com
+Date:        2023-11-15T12:49:39Z
+Fingerprint: de9d7b8cb63bd7ae741ec5c9e23891b71709bc28:deployment2.key:private-key:1
+
+Finding:     "private_key": "-----BEGIN PRIVATE KEY-----\nlRsGbRO/1A5LiQHjuR5SASDASDAiSMNeOYqna2R+HEalBoyISASDASD1Tgkj\n4CC02Uux+...\n",
+Secret:      -----BEGIN PRIVATE KEY-----\nlRsGbRO/1A5LiQHjuR5SASDASDAiSMNeOYqna2R+HEalBoyISASDASD1Tgkj\n4CC02Uux+...
+RuleID:      private-key
+Entropy:     5.917361
+File:        awscredentials.json
+Line:        5
+Commit:      bc17b7ddc46f46fff175aed55d68e11bb48166cc
+Author:      Grzegorz Siewruk
+Email:       gsiewruk@gmail.com
+Date:        2023-11-15T12:52:32Z
+Fingerprint: bc17b7ddc46f46fff175aed55d68e11bb48166cc:awscredentials.json:private-key:5
+
+Finding:     "private_key_id": "002ac3c1623rdewc7bb13f6b10e6"
+Secret:      002ac3c1623rdewc7bb13f6b10e6
+RuleID:      generic-api-key
+Entropy:     3.645593
+File:        awscredentials.json
+Line:        4
+Commit:      bc17b7ddc46f46fff175aed55d68e11bb48166cc
+Author:      Grzegorz Siewruk
+Email:       gsiewruk@gmail.com
+Date:        2023-11-15T12:52:32Z
+Fingerprint: bc17b7ddc46f46fff175aed55d68e11bb48166cc:awscredentials.json:generic-api-key:4
+
+8:42PM INF 7 commits scanned.
+8:42PM INF scan completed in 29.5s
+8:42PM WRN leaks found: 4
