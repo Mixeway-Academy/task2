@@ -51,11 +51,18 @@ public class Student {
         return "Student{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
+                ", email='" + maskEmail(email) + '\'' +
                 ", birthday=" + birthday +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 ", address=" + address +
                 '}';
+    }
+    
+    private String maskEmail(String email) {
+        if (email == null || email.isEmpty()) {
+            return "N/A";
+        }
+        return "***";
     }
 }
