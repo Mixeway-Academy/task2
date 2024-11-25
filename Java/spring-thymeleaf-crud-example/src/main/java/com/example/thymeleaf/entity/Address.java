@@ -57,13 +57,13 @@ public class Address {
     public String toString() {
         return "Address{" +
                 "id='" + id + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                ", street='" + street + '\'' +
-                ", number='" + number + '\'' +
-                ", complement='" + complement + '\'' +
-                ", district='" + district + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
+                ", zipCode='" + "*****" + '\'' +
+                ", street='" + "*****" + '\'' +
+                ", number='" + "*****" + '\'' +
+                ", complement='" + "*****" + '\'' +
+                ", district='" + "*****" + '\'' +
+                ", city='" + "*****" + '\'' +
+                ", state='" + "*****" + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 '}';
