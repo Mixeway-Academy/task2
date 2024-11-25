@@ -50,9 +50,9 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", birthday=" + birthday +
+                ", name='" + "*".repeat(name.length()) + '\'' +
+                ", email='" + "*".repeat(email.length()) + '\'' +
+                ", birthday=" + "*".repeat(birthday.toString().length()) +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 ", address=" + address +
