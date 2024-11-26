@@ -3,6 +3,8 @@ package com.example.thymeleaf.entity;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import com.example.thymeleaf.util.LogMaskingUtil;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -18,6 +20,7 @@ import org.slf4j.LoggerFactory;
 public class Student {
     @Transient
     private static final Logger logger = LoggerFactory.getLogger(Student.class);
+
     @Id
     private String id;
 
@@ -50,12 +53,12 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", birthday=" + birthday +
+                ", name='" + LogMaskingUtil.maskField(name) + '\'' +
+                ", email='" + LogMaskingUtil.maskField(email) + '\'' +
+                ", birthday='" + LogMaskingUtil.maskBirthday(birthday) + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
-                ", address=" + address +
+                ", address=" + (address != null ? address.toString() : null) +
                 '}';
     }
 }

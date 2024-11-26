@@ -3,6 +3,7 @@ package com.example.thymeleaf.entity;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import com.example.thymeleaf.util.LogMaskingUtil;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -57,13 +58,13 @@ public class Address {
     public String toString() {
         return "Address{" +
                 "id='" + id + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                ", street='" + street + '\'' +
-                ", number='" + number + '\'' +
-                ", complement='" + complement + '\'' +
-                ", district='" + district + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
+                ", zipCode='" + LogMaskingUtil.maskField(zipCode) + '\'' +
+                ", street='" + LogMaskingUtil.maskField(street) + '\'' +
+                ", number='" + LogMaskingUtil.maskField(number) + '\'' +
+                ", complement='" + LogMaskingUtil.maskField(complement) + '\'' +
+                ", district='" + LogMaskingUtil.maskField(district) + '\'' +
+                ", city='" + LogMaskingUtil.maskField(city) + '\'' +
+                ", state='" + LogMaskingUtil.maskField(state) + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 '}';
