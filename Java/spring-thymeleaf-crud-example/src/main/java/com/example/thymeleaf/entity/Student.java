@@ -1,5 +1,6 @@
 package com.example.thymeleaf.entity;
 
+import com.example.thymeleaf.utilities.StringMasker;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -50,9 +51,9 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", birthday=" + birthday +
+                ", name='" + StringMasker.mask(name) + '\'' +
+                ", email='" + StringMasker.mask(email) + '\'' +
+                ", birthday=" + StringMasker.mask(birthday.toString()) +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 ", address=" + address +
