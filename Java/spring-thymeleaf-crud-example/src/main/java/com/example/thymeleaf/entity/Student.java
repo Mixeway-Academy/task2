@@ -51,11 +51,10 @@ public class Student {
         return "Student{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
+                ", email=******'" + '\'' +
                 ", birthday=" + birthday +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
-                ", address=" + address +
-                '}';
+                ", address=*****" +'}';
     }
 }
