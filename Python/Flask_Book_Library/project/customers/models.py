@@ -22,8 +22,15 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {mask_data(self.city, 1)}, Age: {self.age}, Pesel: {mask_data(self.pesel)}, Street: {mask_data(self.street, 1)}, AppNo: {mask_data(self.appNo)})"
 
+def mask_data(data, visible_start=0, mask_char="*"):
+    if isinstance(data, int):
+        return (mask_char * 3)
+    elif isinstance(data, str):
+        masked_length = max(0, len(data) - visible_start)
+        return data[:visible_start] + (mask_char * masked_length)
+    return "N/A"
 
 with app.app_context():
     db.create_all()
