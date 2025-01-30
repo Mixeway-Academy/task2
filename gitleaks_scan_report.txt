@@ -1,0 +1,59 @@
+Digest: sha256:d09cbc6b5faa03d81ef4bf430f1a9b6468d992cd30f30ad213b0c53e057fc817
+Status: Downloaded newer image for zricethezav/gitleaks:latest
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+Finding:     -----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+KUp...
+Secret:      -----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+KUp...
+RuleID:      private-key
+Entropy:     5.875154
+File:        deployment.key
+Line:        1
+Commit:      bc17b7ddc46f46fff175aed55d68e11bb48166cc
+Author:      Grzegorz Siewruk
+Email:       gsiewruk@gmail.com
+Date:        2023-11-15T12:52:32Z
+Fingerprint: bc17b7ddc46f46fff175aed55d68e11bb48166cc:deployment.key:private-key:1
+Link:        https://github.com/MTJakob/task2/blob/bc17b7ddc46f46fff175aed55d68e11bb48166cc/deployment.key#L1
+
+Finding:     -----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+KUp...
+Secret:      -----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+KUp...
+RuleID:      private-key
+Entropy:     5.875154
+File:        deployment2.key
+Line:        1
+Commit:      de9d7b8cb63bd7ae741ec5c9e23891b71709bc28
+Author:      Grzegorz Siewruk
+Email:       gsiewruk@gmail.com
+Date:        2023-11-15T12:49:39Z
+Fingerprint: de9d7b8cb63bd7ae741ec5c9e23891b71709bc28:deployment2.key:private-key:1
+Link:        https://github.com/MTJakob/task2/blob/de9d7b8cb63bd7ae741ec5c9e23891b71709bc28/deployment2.key#L1
+
+Finding:     "private_key": "-----BEGIN PRIVATE KEY-----\nlRsGbRO/1A5LiQHjuR5SASDASDAiSMNeOYqna2R+HEalBoyISASDASD1Tgkj\n4CC02Uux+...\n",
+Secret:      -----BEGIN PRIVATE KEY-----\nlRsGbRO/1A5LiQHjuR5SASDASDAiSMNeOYqna2R+HEalBoyISASDASD1Tgkj\n4CC02Uux+...
+RuleID:      private-key
+Entropy:     5.917361
+File:        awscredentials.json
+Line:        5
+Commit:      bc17b7ddc46f46fff175aed55d68e11bb48166cc
+Author:      Grzegorz Siewruk
+Email:       gsiewruk@gmail.com
+Date:        2023-11-15T12:52:32Z
+Fingerprint: bc17b7ddc46f46fff175aed55d68e11bb48166cc:awscredentials.json:private-key:5
+Link:        https://github.com/MTJakob/task2/blob/bc17b7ddc46f46fff175aed55d68e11bb48166cc/awscredentials.json#L5
+
+10:28AM INF 6 commits scanned.
+10:28AM INF scanned ~21991492 bytes (21.99 MB) in 2.12s
+10:28AM WRN leaks found: 3
