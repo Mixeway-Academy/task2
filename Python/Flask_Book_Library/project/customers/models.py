@@ -1,6 +1,11 @@
 from project import db, app
 
 
+def mask_sensitive(data):
+    if data:
+        return '*' * len(data)
+    return None
+
 # Customer model
 class Customer(db.Model):
     __tablename__ = 'customers'
@@ -22,8 +27,7 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
-
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {mask_sensitive(self.pesel)}, Street: {mask_sensitive(self.street)}, AppNo: {self.appNo})"
 
 with app.app_context():
     db.create_all()
