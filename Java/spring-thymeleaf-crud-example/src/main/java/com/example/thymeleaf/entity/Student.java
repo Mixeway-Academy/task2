@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 @Setter
 @Entity
 @Table(name = "student")
-@EqualsAndHashCode(of = {"id"})
+@EqualsAndHashCode(of = { "id" })
 public class Student {
     @Transient
     private static final Logger logger = LoggerFactory.getLogger(Student.class);
@@ -38,7 +38,11 @@ public class Student {
     private void prePersist() {
         this.id = UUID.randomUUID().toString();
         this.createdAt = LocalDateTime.now();
-        logger.info("Created user {}", this);
+
+        logger.info("Created user {}",
+                this.getName().replaceAll(".", "*") + " " + this.getEmail().replaceAll(".", "*") + " " +
+                        this.getBirthday().toString().replaceAll(".", "*") + " "
+                        + this.getAddress().toString().replaceAll(".", "*"));
     }
 
     @PreUpdate
