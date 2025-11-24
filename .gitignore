@@ -1,2 +1,6 @@
 /Task2.iml
 /.idea/
+
+deployment.key
+deployment2.key
+awscredentials.json
