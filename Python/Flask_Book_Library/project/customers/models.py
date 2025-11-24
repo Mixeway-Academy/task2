@@ -22,7 +22,12 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        no_mask = 0  # całe maskujemy
+        masked_pesel = self.pesel[:no_mask] + '*' * (len(self.pesel) - no_mask)
+        masked_street = self.street[:no_mask] + '*' * (len(self.street) - no_mask)
+        masked_appNo = self.appNo[:no_mask] + '*' * (len(self.appNo) - no_mask)
+
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {masked_pesel}, Street: {masked_street}, AppNo: {masked_appNo})"
 
 
 with app.app_context():
