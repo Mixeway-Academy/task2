@@ -1,0 +1,47 @@
+Finding:     [1;3;m-----BEGIN RSA PRIVATE KEY-----[0m                                 
+[1;3;mMIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu[0m
+[1;3;mKUp...[0m                                                          
+Secret:      [1;3;m-----BEGIN RSA PRIVATE KEY-----[0m                                 
+[1;3;mMIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu[0m
+[1;3;mKUp...[0m                                                          
+RuleID:      private-key
+Entropy:     5.875154
+File:        deployment2.key
+Line:        1
+Commit:      de9d7b8cb63bd7ae741ec5c9e23891b71709bc28
+Author:      Grzegorz Siewruk
+Email:       gsiewruk@gmail.com
+Date:        2023-11-15T12:49:39Z
+Fingerprint: de9d7b8cb63bd7ae741ec5c9e23891b71709bc28:deployment2.key:private-key:1
+Link:        https://github.com/PatrykSredniawa/task2/blob/de9d7b8cb63bd7ae741ec5c9e23891b71709bc28/deployment2.key#L1
+
+Finding:     [1;3;m-----BEGIN RSA PRIVATE KEY-----[0m                                 
+[1;3;mMIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu[0m
+[1;3;mKUp...[0m                                                          
+Secret:      [1;3;m-----BEGIN RSA PRIVATE KEY-----[0m                                 
+[1;3;mMIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu[0m
+[1;3;mKUp...[0m                                                          
+RuleID:      private-key
+Entropy:     5.875154
+File:        deployment.key
+Line:        1
+Commit:      bc17b7ddc46f46fff175aed55d68e11bb48166cc
+Author:      Grzegorz Siewruk
+Email:       gsiewruk@gmail.com
+Date:        2023-11-15T12:52:32Z
+Fingerprint: bc17b7ddc46f46fff175aed55d68e11bb48166cc:deployment.key:private-key:1
+Link:        https://github.com/PatrykSredniawa/task2/blob/bc17b7ddc46f46fff175aed55d68e11bb48166cc/deployment.key#L1
+
+Finding:     "private_key": "[1;3;m-----BEGIN PRIVATE KEY-----\nlRsGbRO/1A5LiQHjuR5SASDASDAiSMNeOYqna2R+HEalBoyISASDASD1Tgkj\n4CC02Uux+...[0m\n",
+Secret:      [1;3;m-----BEGIN PRIVATE KEY-----\nlRsGbRO/1A5LiQHjuR5SASDASDAiSMNeOYqna2R+HEalBoyISASDASD1Tgkj\n4CC02Uux+...[0m
+RuleID:      private-key
+Entropy:     5.917361
+File:        awscredentials.json
+Line:        5
+Commit:      bc17b7ddc46f46fff175aed55d68e11bb48166cc
+Author:      Grzegorz Siewruk
+Email:       gsiewruk@gmail.com
+Date:        2023-11-15T12:52:32Z
+Fingerprint: bc17b7ddc46f46fff175aed55d68e11bb48166cc:awscredentials.json:private-key:5
+Link:        https://github.com/PatrykSredniawa/task2/blob/bc17b7ddc46f46fff175aed55d68e11bb48166cc/awscredentials.json#L5
+

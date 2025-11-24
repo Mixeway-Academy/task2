@@ -44,7 +44,8 @@ def create_customer():
         street=data['street'],
         appNo=data['appNo']
     )
-
+    print("Getting: " + str(new_customer), flush=True)
+    
     try:
         db.session.add(new_customer)
         db.session.commit()
