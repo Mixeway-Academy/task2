@@ -3,7 +3,7 @@ from project import db
 from project.loans.models import Loan
 from project.loans.forms import CreateLoan
 from project.books.models import Book
-from project.customers.models import Customer
+from project.customers.models import Customer, CustomerDBModel
 
 
 # Blueprint for loans
@@ -26,7 +26,7 @@ def list_books_json():
 def list_customers_json():
 
     # Fetch all customers from the database
-    customers = Customer.query.all()
+    customers = CustomerDBModel.query.all()
     # Create a list of customer names
     customer_list = [{'name': customer.name} for customer in customers]
     # Return customer data in JSON format
@@ -49,7 +49,7 @@ def create_loan():
     form = CreateLoan()
 
     if request.method == 'POST':
-        
+
         # Process form submission
         customer_name = form.customer_name.data
         book_name = form.book_name.data
@@ -145,7 +145,7 @@ def delete_loan(loan_id):
             author=loan.original_author,
             year_published=loan.original_year_published,
             book_type=loan.original_book_type,
-            status='available'  
+            status='available'
         )
 
         # Add the book to the database
