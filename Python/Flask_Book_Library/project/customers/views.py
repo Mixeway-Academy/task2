@@ -1,6 +1,6 @@
-from flask import render_template, Blueprint, request, redirect, url_for, jsonify
+from flask import render_template, Blueprint, request, redirect, url_for, jsonify, render_template_string
 from project import db
-from project.customers.models import Customer
+from project.customers.models import Customer, CustomerDBModel
 
 
 # Blueprint for customers
@@ -11,8 +11,11 @@ customers = Blueprint('customers', __name__, template_folder='templates', url_pr
 @customers.route('/', methods=['GET'])
 def list_customers():
     # Fetch all customers from the database
-    customers = Customer.query.all()
+    customers = CustomerDBModel.query.all()
     print('Customers page accessed')
+    # if len(customers) == 1:
+    #     print(customers[0].city)
+    #     return render_template_string(customers[0].name + "city:" + customers[0].city + customers[0].street)
     return render_template('customers.html', customers=customers)
 
 
@@ -20,10 +23,18 @@ def list_customers():
 @customers.route('/json', methods=['GET'])
 def list_customers_json():
     # Fetch all customers from the database and convert to JSON
-    customers = Customer.query.all()
+    customers = CustomerDBModel.query.all()
     customer_list = [{'name': customer.name, 'city': customer.city, 'age': customer.age} for customer in customers]
     return jsonify(customers=customer_list)
 
+@customers.app_template_filter("my_filter")
+def my_filter(fn, args):
+    "DATA"
+    print(type(fn))
+    print(repr(fn))
+    print(type(args))
+    print(repr(args))
+    return fn(args)
 
 # Route to create a new customer
 @customers.route('/create', methods=['POST', 'GET'])
@@ -46,7 +57,7 @@ def create_customer():
     )
 
     try:
-        db.session.add(new_customer)
+        db.session.add(new_customer.db_model)
         db.session.commit()
         print('Customer added successfully')
         return redirect(url_for('customers.list_customers'))
@@ -60,7 +71,7 @@ def create_customer():
 @customers.route('/<int:customer_id>/edit-data', methods=['GET'])
 def edit_customer_data(customer_id):
     # Get the customer with the given ID
-    customer = Customer.query.get(customer_id)
+    customer = Customer.get(customer_id)
 
     if customer:
         # Convert customer data to a dictionary
@@ -79,7 +90,7 @@ def edit_customer_data(customer_id):
 @customers.route('/<int:customer_id>/edit', methods=['POST'])
 def edit_customer(customer_id):
     # Get the customer with the given ID
-    customer = Customer.query.get(customer_id)
+    customer = Customer.get(customer_id)
 
     # Check if the customer exists
     if not customer:
@@ -91,9 +102,9 @@ def edit_customer(customer_id):
         data = request.form
 
         # Update customer details
-        customer.name = data['name']
-        customer.city = data['city']
-        customer.age = data['age']
+        customer.set_name(data['name'])
+        customer.set_city(data['city'])
+        customer.set_age(data['age'])
 
         # Commit the changes to the database
         db.session.commit()
@@ -109,14 +120,14 @@ def edit_customer(customer_id):
 # Route to delete a customer
 @customers.route('/<int:customer_id>/delete', methods=['POST'])
 def delete_customer(customer_id):
-    customer = Customer.query.get(customer_id)
+    customer = Customer.get(customer_id)
     if not customer:
         print('Customer not found')
         return jsonify({'error': 'Customer not found'}), 404
 
     try:
         # Delete the customer from the database
-        db.session.delete(customer)
+        db.session.delete(customer.db_model)
         db.session.commit()
         print('Customer deleted successfully')
         return redirect(url_for('customers.list_customers'))
