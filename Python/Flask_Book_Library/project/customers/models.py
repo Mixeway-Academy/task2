@@ -1,4 +1,5 @@
 from project import db, app
+from project.hidedata import hidePersonalData
 
 
 # Customer model
@@ -22,7 +23,7 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        return f"Customer(ID: {self.id}, Name: {hidePersonalData(self.name)}, City: {hidePersonalData(self.city)}, Age: {hidePersonalData(self.age)}, Pesel: {hidePersonalData(self.pesel)}, Street: {hidePersonalData(self.street)}, AppNo: {self.appNo})"
 
 
 with app.app_context():
