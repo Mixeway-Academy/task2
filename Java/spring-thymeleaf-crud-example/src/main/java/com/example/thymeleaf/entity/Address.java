@@ -53,17 +53,23 @@ public class Address {
         this.updatedAt = LocalDateTime.now();
     }
 
+
+    private String maskSensitiveInformation(String value) {
+        if (value == null) return null;
+        return "*".repeat(value.length());
+    }
+
     @Override
     public String toString() {
         return "Address{" +
                 "id='" + id + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                ", street='" + street + '\'' +
-                ", number='" + number + '\'' +
-                ", complement='" + complement + '\'' +
+                ", zipCode='" + maskSensitiveInformation(zipCode) + '\'' +
+                ", street='" + maskSensitiveInformation(street) + '\'' +
+                ", number='" + maskSensitiveInformation(number) + '\'' +
+                ", complement='" + maskSensitiveInformation(complement) + '\'' +
                 ", district='" + district + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
+                ", city='" + maskSensitiveInformation(city) + '\'' +
+                ", state='" + maskSensitiveInformation(state) + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 '}';

