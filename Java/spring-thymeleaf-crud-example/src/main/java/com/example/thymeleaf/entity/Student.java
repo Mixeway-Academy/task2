@@ -10,6 +10,8 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static com.example.thymeleaf.util.LogMasker.masked;
+
 @Getter
 @Setter
 @Entity
@@ -50,9 +52,9 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", birthday=" + birthday +
+                ", name='" + masked(name) + '\'' +
+                ", email='" + masked(email) + '\'' +
+                ", birthday=" + masked(birthday) +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 ", address=" + address +
