@@ -1,6 +1,9 @@
 from project import db, app
 
 
+def _mask(value):
+    return '*' * len(str(value)) if value is not None else value
+
 # Customer model
 class Customer(db.Model):
     __tablename__ = 'customers'
@@ -22,8 +25,9 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
-
+        return (f"Customer(ID: {self.id}, Name: {self.name}, City: {_mask(self.city)}, "
+                f"Age: {self.age}, Pesel: {_mask(self.pesel)}, Street: {_mask(self.street)}, "
+                f"AppNo: {_mask(self.appNo)})")
 
 with app.app_context():
     db.create_all()
