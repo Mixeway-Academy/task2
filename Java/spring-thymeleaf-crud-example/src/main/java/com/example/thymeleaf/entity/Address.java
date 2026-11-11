@@ -10,6 +10,8 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static com.example.thymeleaf.util.LogMasker.masked;
+
 @Getter
 @Setter
 @Entity
@@ -57,13 +59,13 @@ public class Address {
     public String toString() {
         return "Address{" +
                 "id='" + id + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                ", street='" + street + '\'' +
-                ", number='" + number + '\'' +
-                ", complement='" + complement + '\'' +
-                ", district='" + district + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
+                ", zipCode='" + masked(zipCode) + '\'' +
+                ", street='" + masked(street) + '\'' +
+                ", number='" + masked(number) + '\'' +
+                ", complement='" + masked(complement) + '\'' +
+                ", district='" + masked(district) + '\'' +
+                ", city='" + masked(city) + '\'' +
+                ", state='" + masked(state) + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 '}';
