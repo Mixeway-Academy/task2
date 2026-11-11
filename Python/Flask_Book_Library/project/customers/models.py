@@ -1,5 +1,10 @@
 from project import db, app
 
+def masked(data):
+    if data:
+        return '*' * len(data)
+    return none
+
 
 # Customer model
 class Customer(db.Model):
@@ -22,7 +27,7 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        return f"Customer(ID: {self.id}, Name: {masked(self.name)}, City: {masked(self.city)}, Age: {masked(self.age)}, Pesel: {masked(self.pesel)}, Street: {masked(self.street)}, AppNo: {masked(self.appNo)})"
 
 
 with app.app_context():
