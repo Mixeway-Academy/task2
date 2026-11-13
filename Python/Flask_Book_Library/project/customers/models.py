@@ -21,6 +21,13 @@ class Customer(db.Model):
         self.appNo = appNo
         print("Getting: " + str(self),flush=True)
 
+    def __str__(self):
+        hidden_pesel = "*" * len(self.pesel)
+        hidden_street = "*" * len(self.street)
+        hidden_apt_no = "*" * len(self.appNo)
+        
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {hidden_pesel}, Street: {hidden_street}, AppNo: {hidden_apt_no})"
+        
     def __repr__(self):
         return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
 
