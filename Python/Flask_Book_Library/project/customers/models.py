@@ -22,7 +22,17 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        masked = self.get_masked_data()
+        return (f"Customer(ID: {self.id}, Name: {self.name}, "
+                f"City: {masked['city']}, Age: {self.age}, "
+                f"Pesel: {masked['pesel']}, Street: {masked['street']}, "
+                f"AppNo: {self.appNo})")
+    def get_masked_data(self):
+        return {
+            'pesel': '*' * len(self.pesel) if self.pesel else "None",
+            'street': '*' * len(self.street) if self.street else "None",
+            'city': '*' * len(self.city) if self.city else "None"
+        }
 
 
 with app.app_context():
