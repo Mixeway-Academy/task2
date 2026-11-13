@@ -3,6 +3,8 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
+from project.masking import init_log_masking
+init_log_masking()
 
 # Database Setup
 app = Flask(__name__)
