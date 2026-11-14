@@ -1,5 +1,5 @@
 from project import db, app
-
+from project.utils.utils import hide_sensitive_data
 
 # Customer model
 class Customer(db.Model):
@@ -22,7 +22,7 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {hide_sensitive_data(self.pesel)}, Street: {hide_sensitive_data(self.street)}, AppNo: {hide_sensitive_data(self.appNo)})"
 
 
 with app.app_context():
