@@ -1,5 +1,6 @@
 package com.example.thymeleaf.entity;
 
+import com.example.thymeleaf.util.MaskUtil;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -51,7 +52,7 @@ public class Student {
         return "Student{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
+                ", email='" + MaskUtil.mask(email) + '\'' +
                 ", birthday=" + birthday +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +

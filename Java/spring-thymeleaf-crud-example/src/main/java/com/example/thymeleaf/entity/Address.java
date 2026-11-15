@@ -1,5 +1,6 @@
 package com.example.thymeleaf.entity;
 
+import com.example.thymeleaf.util.MaskUtil;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -57,13 +58,13 @@ public class Address {
     public String toString() {
         return "Address{" +
                 "id='" + id + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                ", street='" + street + '\'' +
-                ", number='" + number + '\'' +
-                ", complement='" + complement + '\'' +
-                ", district='" + district + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
+                ", zipCode='" + MaskUtil.mask(zipCode) + '\'' +
+                ", street='" + MaskUtil.mask(street) + '\'' +
+                ", number='" + MaskUtil.mask(number) + '\'' +
+                ", complement='" + MaskUtil.mask(complement) + '\'' +
+                ", district='" + MaskUtil.mask(district) + '\'' +
+                ", city='" + MaskUtil.mask(city) + '\'' +
+                ", state='" + MaskUtil.mask(state) + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 '}';
