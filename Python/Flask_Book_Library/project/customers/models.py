@@ -12,6 +12,11 @@ class Customer(db.Model):
     street = db.Column(db.String(128))
     appNo = db.Column(db.String(10))
 
+    def _mask(self, value):
+        if value is None:
+            return None
+        return '***'    # constant number of characters
+
     def __init__(self, name, city, age, pesel, street, appNo):
         self.name = name
         self.city = city
@@ -22,7 +27,8 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        # Name is not masked in order to allow identification in logs
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self._mask(self.city)}, Age: {self._mask(self.age)}, Pesel: {self._mask(self.pesel)}, Street: {self._mask(self.street)}, AppNo: {self._mask(self.appNo)})"
 
 
 with app.app_context():
