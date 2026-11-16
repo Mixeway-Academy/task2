@@ -3,7 +3,7 @@ from project import db, app
 
 # Customer model
 class Customer(db.Model):
-    __tablename__ = 'customers'
+    __tablename__ = "customers"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), unique=True, index=True)
     city = db.Column(db.String(64))
@@ -19,10 +19,12 @@ class Customer(db.Model):
         self.pesel = pesel
         self.street = street
         self.appNo = appNo
-        print("Getting: " + str(self),flush=True)
+        print("Getting: " + str(self), flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        censor_string = "*" * 5
+
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {censor_string}, Age: {self.age}, Pesel: {censor_string}, Street: {censor_string}, AppNo: {censor_string})"
 
 
 with app.app_context():
