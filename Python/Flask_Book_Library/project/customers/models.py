@@ -1,4 +1,5 @@
 from project import db, app
+from project.masking import mask
 
 
 # Customer model
@@ -22,7 +23,8 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        # Mask PESEL and address fields, this repr is printed to logs
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {mask(self.city)}, Age: {self.age}, Pesel: {mask(self.pesel)}, Street: {mask(self.street)}, AppNo: {mask(self.appNo)})"
 
 
 with app.app_context():
