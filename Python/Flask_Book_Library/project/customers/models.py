@@ -22,8 +22,12 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        # Zamaskowanie wrażliwych danych: PESEL oraz Street
+        masked_pesel = "*********" if self.pesel else "None"
+        masked_street = "*********" if self.street else "None"
+        masked_appNo = "*********" if self.appNo else "None"
 
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {masked_pesel}, Street: {masked_street}, AppNo: {masked_appNo})"
 
 with app.app_context():
     db.create_all()
