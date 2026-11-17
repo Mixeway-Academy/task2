@@ -1,6 +1,7 @@
 from flask import render_template, Blueprint, request, redirect, url_for, jsonify
 from project import db
 from project.customers.models import Customer
+from project.utils.masking import redact
 
 
 # Blueprint for customers
@@ -52,8 +53,10 @@ def create_customer():
         return redirect(url_for('customers.list_customers'))
     except Exception as e:
         db.session.rollback()
-        print(f'Error creating customer: {str(e)}')
-        return jsonify({'error': f'Error creating customer: {str(e)}'}), 500
+        # the exception text echoes SQL parameters (PESEL, street, apartment no.) - mask them
+        error = redact(e, data['pesel'], data['street'], data['appNo'])
+        print(f'Error creating customer: {error}')
+        return jsonify({'error': f'Error creating customer: {error}'}), 500
 
 
 # Route to fetch customer data for editing
