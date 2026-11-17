@@ -1,5 +1,7 @@
 from project import db, app
 
+def _mask(value):
+    return '*' * len(str(value)) if value else value
 
 # Customer model
 class Customer(db.Model):
@@ -21,8 +23,10 @@ class Customer(db.Model):
         self.appNo = appNo
         print("Getting: " + str(self),flush=True)
 
+
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {_mask(self.city)}, Age: {self.age}, Pesel: {_mask(self.pesel)}, Street: {_mask(self.street)}, AppNo: {_mask(self.appNo)})"
 
 
 with app.app_context():
