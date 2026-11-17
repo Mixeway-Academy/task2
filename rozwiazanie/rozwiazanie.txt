@@ -1,0 +1,98 @@
+zadanie 1:
+2026-11-16 19:30:27.579  INFO 1 --- [nio-8080-exec-1] com.example.thymeleaf.entity.Student     : Created user Student{id='b964629f-3494-4ab3-b5fb-3d3271b54c0a', name='*********', email='*********', birthday=*********, createdAt=2026-11-16T19:30:27.579814, updatedAt=null, address=Address{id='null', zipCode='12345-678', street='Ulica', number='2', complement='Mieszkanie testowe', district='Dzielnica', city='Miasto', state='TS', createdAt=null, updatedAt=null}}
+2026-11-16 19:30:27.579  INFO 1 --- [nio-8080-exec-1] com.example.thymeleaf.entity.Student     : Created user Student{id='b964629f-3494-4ab3-b5fb-3d3271b54c0a', name='*********', email='*********', birthday=*********, createdAt=2026-11-16T19:30:27.579814, updatedAt=null, address=Address{id='null', zipCode='12345-678', street='Ulica', number='2', complement='Mieszkanie testowe', district='Dzielnica', city='Miasto', state='TS', createdAt=null, updatedAt=null}}
+
+Poprawka:
+    public String toString() {
+        return "Student{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", birthday=" + birthday +
+                ", name='" + "*********" + '\'' +
+                ", email='" + "*********" + '\'' +
+                ", birthday=" + "*********" +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
+                ", address=" + address +
+
+zadanie 2:
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+Finding:     -----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+KUp...
+Secret:      -----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+KUp...
+RuleID:      private-key
+Entropy:     5.875154
+File:        deployment2.key
+Line:        1
+Commit:      de9d7b8cb63bd7ae741ec5c9e23891b71709bc28
+Author:      Grzegorz Siewruk
+Email:       gsiewruk@gmail.com
+Date:        2023-11-15T12:49:39Z
+Fingerprint: de9d7b8cb63bd7ae741ec5c9e23891b71709bc28:deployment2.key:private-key:1
+Link:        https://github.com/agorski1/task2/blob/de9d7b8cb63bd7ae741ec5c9e23891b71709bc28/deployment2.key#L1
+
+Finding:     -----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+KUp...
+Secret:      -----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+KUp...
+RuleID:      private-key
+Entropy:     5.875154
+File:        deployment.key
+Line:        1
+Commit:      bc17b7ddc46f46fff175aed55d68e11bb48166cc
+Author:      Grzegorz Siewruk
+Email:       gsiewruk@gmail.com
+Date:        2023-11-15T12:52:32Z
+Fingerprint: bc17b7ddc46f46fff175aed55d68e11bb48166cc:deployment.key:private-key:1
+Link:        https://github.com/agorski1/task2/blob/bc17b7ddc46f46fff175aed55d68e11bb48166cc/deployment.key#L1
+
+Finding:     "private_key": "-----BEGIN PRIVATE KEY-----\nlRsGbRO/1A5LiQHjuR5SASDASDAiSMNeOYqna2R+HEalBoyISASDASD1Tgkj\n4CC02Uux+...\n",
+Secret:      -----BEGIN PRIVATE KEY-----\nlRsGbRO/1A5LiQHjuR5SASDASDAiSMNeOYqna2R+HEalBoyISASDASD1Tgkj\n4CC02Uux+...
+RuleID:      private-key
+Entropy:     5.917361
+File:        awscredentials.json
+Line:        5
+Commit:      bc17b7ddc46f46fff175aed55d68e11bb48166cc
+Author:      Grzegorz Siewruk
+Email:       gsiewruk@gmail.com
+Date:        2023-11-15T12:52:32Z
+Fingerprint: bc17b7ddc46f46fff175aed55d68e11bb48166cc:awscredentials.json:private-key:5
+Link:        https://github.com/agorski1/task2/blob/bc17b7ddc46f46fff175aed55d68e11bb48166cc/awscredentials.json#L5
+
+Podsumowanie:
+- Historia Git: 3 trafienia — dwa dotyczą tego samego poprawnego klucza prywatnego, trzecie zawiera niepoprawny materiał klucza.
+- Bieżące pliki: Gitleaks zgłosił 0 trafień, ale ręcznie znalazłem stałe hasła i klucz Flask.
+- Pusta zmienna password nie jest sekretem.
+
+
+zadanie 3:
++============================+===========+==========================+==========+
+| flask                      | 2.3.3     | <3.1.3                   | 86909    |
++==============================================================================+
+| Affected versions of the Flask package are vulnerable to Information         |
+| Disclosure due to missing cache-variation headers when the session object is |
+| accessed via certain code paths. In Flask’s session handling, accessing      |
+| flask.session is intended to set a Vary: Cookie response header, but session |
+| key-only access patterns (such as using the Python in operator to test for a |
+| key without reading or mutating session values) can bypass the logic that    |
+| adds the header.                                                             |
+
+Podsumowanie:
+Biblioteka: Flask
+Wersja podatna: 2.3.3 (wersje poniżej 3.1.3)
+ID podatności: 86909
+Rodzaj podatności: Information Disclosure (ujawnienie informacji).
+Opis: Brak nagłówka Vary: Cookie przy niektórych operacjach na sesji może powodować nieprawidłowe buforowanie odpowiedzi HTTP.
+Wykorzystanie: Atakujący może uzyskać dostęp do danych sesyjnych innego użytkownika, jeśli współdzielona pamięć podręczna udostępni mu odpowiedź przeznaczoną dla tej osoby.
