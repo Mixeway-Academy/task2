@@ -10,6 +10,8 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static com.example.thymeleaf.util.MaskingUtils.mask;
+
 @Getter
 @Setter
 @Entity
@@ -38,7 +40,7 @@ public class Student {
     private void prePersist() {
         this.id = UUID.randomUUID().toString();
         this.createdAt = LocalDateTime.now();
-        logger.info("Created user {}", this);
+        logger.info("Created user {}", toStringMasked());
     }
 
     @PreUpdate
@@ -56,6 +58,18 @@ public class Student {
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 ", address=" + address +
+                '}';
+    }
+
+    public String toStringMasked() {
+        return "Student{" +
+                "id='" + id + '\'' +
+                ", name='" + mask(name) + '\'' +
+                ", email='" + mask(email) + '\'' +
+                ", birthday=" + mask(birthday) +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
+                ", address=" + (address == null ? "null" : address.toStringMasked()) +
                 '}';
     }
 }
