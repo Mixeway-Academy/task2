@@ -1,4 +1,12 @@
+from __future__ import annotations
 from project import db, app
+
+
+def mask(value, replacement: str = '*') -> str | None:
+    """Replace every character of a value"""
+    if value is None:
+        return None
+    return replacement * len(str(value))
 
 
 # Customer model
@@ -22,7 +30,7 @@ class Customer(db.Model):
         print("Getting: " + str(self),flush=True)
 
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        return f"Customer(ID: {self.id}, Name: {mask(self.name)}, City: {self.city}, Age: {self.age}, Pesel: {mask(self.pesel)}, Street: {mask(self.street)}, AppNo: {mask(self.appNo)})"
 
 
 with app.app_context():
