@@ -21,8 +21,12 @@ class Customer(db.Model):
         self.appNo = appNo
         print("Getting: " + str(self),flush=True)
 
+    @staticmethod
+    def _mask(value):
+        return '*' * len(str(value)) if value is not None else ''
+
     def __repr__(self):
-        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age}, Pesel: {self.pesel}, Street: {self.street}, AppNo: {self.appNo})"
+        return f"Customer(ID: {self.id}, Name: {self.name}, City: {self._mask(self.city)}, Age: {self.age}, Pesel: {self._mask(self.pesel)}, Street: {self._mask(self.street)}, AppNo: {self._mask(self.appNo)})"
 
 
 with app.app_context():
