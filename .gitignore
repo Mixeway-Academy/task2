@@ -1,2 +1,5 @@
 /Task2.iml
 /.idea/
+/.venv/
+/.work/
+__pycache__/
