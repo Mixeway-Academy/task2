@@ -50,10 +50,10 @@ def create_customer():
         db.session.commit()
         print('Customer added successfully')
         return redirect(url_for('customers.list_customers'))
-    except Exception as e:
+    except Exception:
         db.session.rollback()
-        print(f'Error creating customer: {str(e)}')
-        return jsonify({'error': f'Error creating customer: {str(e)}'}), 500
+        print('Error creating customer')
+        return jsonify({'error': 'Error creating customer'}), 500
 
 
 # Route to fetch customer data for editing
@@ -99,11 +99,11 @@ def edit_customer(customer_id):
         db.session.commit()
         print('Customer updated succesfully')
         return redirect(url_for('customers.list_customers'))
-    except Exception as e:
+    except Exception:
         # Handle any exceptions
         db.session.rollback()
         print('Error updating customer')
-        return jsonify({'error': f'Error updating customer: {str(e)}'}), 500
+        return jsonify({'error': 'Error updating customer'}), 500
 
 
 # Route to delete a customer
